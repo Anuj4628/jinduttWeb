@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+@layer base {
+  html,
+  body,
+  #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+.logo-marquee-shell {
+  box-shadow: none;
+  background: transparent;
+  border-color: rgba(215, 155, 32, 0.35);
+}
+
+.logo-marquee-shell::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+
+.agency-logo-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(215, 155, 32, 0.45);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 251, 1));
+  box-shadow: 0 10px 24px rgba(215, 155, 32, 0.08);
+  transform: translateY(0) scale(1);
+  transition: transform 320ms ease, box-shadow 320ms ease, border-color 320ms ease, background 320ms ease;
+}
+
+.agency-logo-card::before {
+  content: "";
+  position: absolute;
+  left: -70%;
+  top: -80%;
+  width: 45%;
+  height: 260%;
+  transform: rotate(18deg);
+  background: linear-gradient(90deg, transparent, rgba(215, 155, 32, 0.6), transparent);
+  opacity: 0;
+  transition: left 700ms ease, opacity 280ms ease;
+}
+
+.agency-logo-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  opacity: 0;
+  transition: opacity 340ms ease;
+}
+
+.agency-logo-card:hover {
+  transform: translateY(-6px) scale(1.04);
+  border-color: #d79b20;
+  box-shadow: 0 18px 40px rgba(215, 155, 32, 0.22), 0 0 0 1px rgba(215, 155, 32, 0.3) inset;
+  background:
+    linear-gradient(135deg, rgba(255, 246, 232, 1), rgba(255, 255, 255, 1));
+}
+
+.agency-logo-card:hover::before {
+  left: 110%;
+  opacity: 1;
+}
+
+.agency-logo-card:hover::after {
+  opacity: 1;
+}
+
+.agency-logo-card:hover .agency-logo-img {
+  transform: scale(1.06);
+  filter: saturate(1.16) contrast(1.05);
+}
+
+.agency-logo-img {
+  max-width: 100%;
+  max-height: 100%;
+  transition: transform 380ms ease, filter 380ms ease;
+}
+
+.premium-small-card {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid rgba(13, 31, 74, 0.09);
+  box-shadow: 0 6px 16px rgba(10, 26, 82, 0.06);
+  min-height: 120px;
+  transition: transform 380ms ease, box-shadow 380ms ease, border-color 380ms ease, background 380ms ease;
+}
+
+.premium-small-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  border: 1px solid transparent;
+  pointer-events: none;
+}
+
+.premium-small-card::after {
+  content: "";
+  position: absolute;
+  left: -30%;
+  top: -50%;
+  width: 30%;
+  height: 210%;
+  transform: rotate(18deg);
+  background: linear-gradient(90deg, transparent, rgba(215, 155, 32, 0.5), transparent);
+  opacity: 0;
+  transition: left 720ms ease, opacity 420ms ease;
+}
+
+.premium-small-card:hover {
+  transform: translateY(-7px) scale(1.018);
+  border-color: rgba(215, 155, 32, 0.82);
+  box-shadow: 0 18px 40px rgba(10, 26, 82, 0.14), 0 0 0 1px rgba(215, 155, 32, 0.38) inset;
+  background: linear-gradient(180deg, #ffffff, #fffaf4);
+}
+
+.premium-small-card:hover::before {
+  border-color: rgba(215, 155, 32, 0.75);
+  animation: premiumBorderFlow 900ms ease forwards;
+}
+
+.premium-small-card:hover::after {
+  left: 115%;
+  opacity: 1;
+}
+
+.premium-small-card:hover .premium-card-icon {
+  transform: rotate(12deg) scale(1.12);
+  color: #d79b20;
+}
+
+.premium-small-card:hover .premium-card-head h4 {
+  color: #0a1a52;
+}
+
+.premium-card-head {
+  position: relative;
+  z-index: 2;
+}
+
+.premium-card-head h4 {
+  transition: color 360ms ease, transform 360ms ease;
+}
+
+.premium-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 420ms ease, color 420ms ease, filter 420ms ease;
+}
+
+.premium-card-icon svg {
+  width: 22px;
+  height: 22px;
+  color: #2440a4;
+}
+
+.premium-card-copy {
+  transition: color 360ms ease, transform 360ms ease;
+}
+
+.premium-small-card:hover .premium-card-copy {
+  color: #49546c;
+}
+
+@keyframes premiumBorderFlow {
+  0% {
+    box-shadow: 0 0 0 rgba(215, 155, 32, 0);
+    opacity: 0.8;
+  }
+  50% {
+    box-shadow: 0 0 0 1px rgba(215, 155, 32, 0.5);
+    opacity: 1;
+  }
+  100% {
+    box-shadow: 0 0 14px rgba(215, 155, 32, 0.18);
+    opacity: 1;
+  }
+}
