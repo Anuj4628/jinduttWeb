@@ -144,28 +144,28 @@ const Hero3 = () => {
         </div>
       </div>
 
-      {/* RIGHT SIDE - DARK PANEL */}
+      {/* RIGHT SIDE - LIGHT BLUE PANEL */}
       <div
         ref={rightRef}
-        className={`w-full mr-10 lg:w-[42%] bg-black px-6 py-4 sm:px-8 sm:py-5 md:px-12 md:py-7 lg:px-16 lg:py-8 flex flex-col justify-between relative min-h-[380px] transition-all duration-1000 ease-out delay-200 ${
+        className={`w-full mr-10 lg:w-[42%] bg-gradient-to-br from-[#f8fafc] via-[#f0f5fc] to-[#e8f1fc] border border-blue-200/70 shadow-lg shadow-blue-900/5 rounded-2xl px-6 py-6 sm:px-8 sm:py-8 md:px-12 md:py-10 flex flex-col justify-between relative min-h-[380px] transition-all duration-1000 ease-out delay-200 ${
           isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-16"
         }`}
       >
         {/* Decorative Elements */}
-        <div className="absolute top-6 left-6 w-12 h-12 border-t-2 border-l-2 border-[#d79b20]/30"></div>
-        <div className="absolute bottom-6 right-6 w-12 h-12 border-b-2 border-r-2 border-[#d79b20]/30"></div>
-        <div className="absolute top-1/2 right-0 w-64 h-64 bg-[#d79b20]/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-6 left-6 w-12 h-12 border-t-2 border-l-2 border-[#d79b20]/40"></div>
+        <div className="absolute bottom-6 right-6 w-12 h-12 border-b-2 border-r-2 border-[#d79b20]/40"></div>
+        <div className="absolute top-1/2 right-0 w-64 h-64 bg-blue-400/5 rounded-full blur-3xl"></div>
 
         {/* GST Certificate Badge Section - UPPERCASE */}
-        <div className="mt-6 flex items-start gap-4 relative z-10">
-          <div className="border border-[#d79b20]/30 p-3 text-[#d79b20] flex items-center justify-center w-12 h-12 rounded-xl bg-[#d79b20]/10">
+        <div className="mt-2 flex items-start gap-4 relative z-10">
+          <div className="border border-[#d79b20]/30 p-3 text-[#d79b20] flex items-center justify-center w-12 h-12 rounded-xl bg-white shadow-sm">
             <FaIndustry className="w-5 h-5" />
           </div>
           <div>
             <span className="text-[10px] tracking-[0.15em] font-bold text-[#d79b20] block uppercase mb-1">
               TAX REGISTRATION
             </span>
-            <h2 className="text-xl md:text-2xl font-black text-white uppercase tracking-tight leading-tight">
+            <h2 className="text-xl md:text-2xl font-black text-[#0a1a52] uppercase tracking-tight leading-tight">
               GST <br />
               CERTIFICATE
             </h2>
@@ -173,14 +173,14 @@ const Hero3 = () => {
         </div>
 
         {/* Certificate Description - UPPERCASE */}
-        <p className="text-slate-300 text-xs md:text-sm leading-relaxed my-6 max-w-md relative z-10 uppercase">
+        <p className="text-slate-600 text-xs md:text-sm leading-relaxed my-6 max-w-md relative z-10 uppercase font-medium">
           VERIFIES OUR VALID GOODS AND SERVICES TAX REGISTRATION, ENSURING
           COMPLETE TAX COMPLIANCE AND TRANSPARENT BUSINESS OPERATIONS ACROSS ALL
           DOMESTIC AND INTERNATIONAL TRANSACTIONS.
         </p>
 
         {/* View Certificate Button */}
-        <div className="w-full max-w-md bg-[#d79b20] hover:bg-[#c08a1a] transition text-white flex items-center justify-between rounded-xl shadow-lg shadow-[#d79b20]/20 mb-3 cursor-pointer group relative z-10">
+        <div className="w-full max-w-md bg-gradient-to-r from-[#d79b20] to-[#c08a1a] hover:from-[#c08a1a] hover:to-[#b07d15] transition text-white flex items-center justify-between rounded-xl shadow-md shadow-[#d79b20]/20 mb-3 cursor-pointer group relative z-10">
           <div
             className="p-4 md:p-5 flex flex-col text-left flex-1"
             onClick={handleViewCertificate}
@@ -189,7 +189,7 @@ const Hero3 = () => {
               <FaFileDownload className="w-3 h-3" />
               VIEW GST CERTIFICATE
             </span>
-            <span className="text-[10px] text-white/70 mt-0.5 font-medium uppercase">
+            <span className="text-[10px] text-white/80 mt-0.5 font-medium uppercase">
               PDF FORMAT • OFFICIAL TAX REGISTRATION
             </span>
           </div>
@@ -202,21 +202,21 @@ const Hero3 = () => {
         </div>
 
         {/* Download Button */}
-        <div className="w-full max-w-md bg-[#0a1a52] hover:bg-[#1a3a7a] transition text-white flex items-center justify-between rounded-xl border border-[#d79b20]/30 shadow-lg shadow-[#d79b20]/10 mb-8 cursor-pointer group relative z-10">
+        <div className="w-full max-w-md bg-white hover:bg-slate-50 transition text-[#0a1a52] flex items-center justify-between rounded-xl border border-blue-200/80 shadow-sm mb-6 cursor-pointer group relative z-10">
           <div
             className="p-4 md:p-5 flex flex-col text-left flex-1"
             onClick={handleDownload}
           >
-            <span className="text-xs font-bold tracking-wider uppercase flex items-center gap-2">
-              <FaFileDownload className="w-3 h-3" />
+            <span className="text-xs font-bold tracking-wider uppercase flex items-center gap-2 text-[#0a1a52]">
+              <FaFileDownload className="w-3 h-3 text-[#d79b20]" />
               DOWNLOAD PDF
             </span>
-            <span className="text-[10px] text-white/50 mt-0.5 font-medium uppercase">
+            <span className="text-[10px] text-slate-500 mt-0.5 font-medium uppercase">
               SAVE TO DEVICE • INSTANT DOWNLOAD
             </span>
           </div>
           <div
-            className="bg-white/5 p-5 md:p-6 flex items-center justify-center group-hover:bg-white/10 transition rounded-r-xl"
+            className="bg-blue-50/60 p-5 md:p-6 flex items-center justify-center group-hover:bg-blue-100/60 transition rounded-r-xl text-[#0a1a52]"
             onClick={handleDownload}
           >
             <span className="text-lg">↓</span>
@@ -224,27 +224,27 @@ const Hero3 = () => {
         </div>
 
         {/* Execute Verification Action - UPPERCASE */}
-        <div className="w-full border-t border-white/10 pt-6 mt-auto relative z-10">
+        <div className="w-full border-t border-slate-200 pt-5 mt-auto relative z-10">
           <Link
             to="/certificates"
-            className="text-[10px] tracking-[0.15em] font-bold text-white uppercase hover:text-[#d79b20] transition flex items-center gap-2 group"
+            className="text-[10px] tracking-[0.15em] font-bold text-[#0a1a52] uppercase hover:text-[#d79b20] transition flex items-center gap-2 group"
           >
-            <FaShieldAlt className="w-3 h-3 group-hover:scale-110 transition-transform" />
+            <FaShieldAlt className="w-3 h-3 text-[#d79b20] group-hover:scale-110 transition-transform" />
             VIEW ALL CERTIFICATES
           </Link>
         </div>
 
         {/* Trust Badges - UPPERCASE */}
-        <div className="flex gap-4 mt-6 relative z-10">
+        <div className="flex gap-4 mt-4 relative z-10">
           <div className="flex items-center gap-2">
             <FaCheckCircle className="w-3 h-3 text-[#d79b20]" />
-            <span className="text-[8px] text-white/60 uppercase tracking-wider">
+            <span className="text-[9px] text-slate-600 font-bold uppercase tracking-wider">
               GST REGISTERED
             </span>
           </div>
           <div className="flex items-center gap-2">
             <FaAward className="w-3 h-3 text-[#d79b20]" />
-            <span className="text-[8px] text-white/60 uppercase tracking-wider">
+            <span className="text-[9px] text-slate-600 font-bold uppercase tracking-wider">
               TAX COMPLIANT
             </span>
           </div>

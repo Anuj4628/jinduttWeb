@@ -228,8 +228,8 @@ const Hero4 = () => {
       {/* =============================== */}
       {/* SECTION 1: THIRD-PARTY INSPECTION AGENCIES */}
       {/* =============================== */}
-      <section className="w-full bg-[#0a1a52] text-white py-20 px-6 md:px-16 lg:px-24 flex flex-col items-center relative overflow-hidden font-sans">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(215,155,32,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(215,155,32,0.05)_1px,transparent_1px)] bg-[size:48px_48px]"></div>
+      <section className="w-full bg-gradient-to-b from-[#ffffff] via-[#f1f5fa] to-[#f8fafc] text-[#0a1a52] py-20 px-6 md:px-16 lg:px-24 flex flex-col items-center relative overflow-hidden font-sans border-y border-slate-200/60">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(10,26,82,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(10,26,82,0.025)_1px,transparent_1px)] bg-[size:48px_48px] pointer-events-none"></div>
 
         <div className="flex flex-col justify-center items-center gap-5 max-w-4xl mx-auto text-center mb-16 relative z-10">
           <div className="flex items-center gap-3 mb-2">
@@ -240,19 +240,21 @@ const Hero4 = () => {
             <span className="w-10 h-0.5 bg-[#d79b20]"></span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-white uppercase leading-[1.15]">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-[#0a1a52] uppercase leading-[1.15]">
             APPROVED THIRD-PARTY{" "}
             <span className="text-[#d79b20]">INSPECTION AGENCIES</span>
           </h1>
 
-          <p className="text-slate-300 text-sm md:text-base max-w-2xl leading-relaxed mt-2">
+          <div className="w-24 h-1 bg-gradient-to-r from-[#0a1a52] to-[#d79b20] rounded-full"></div>
+
+          <p className="text-slate-600 text-sm md:text-base max-w-2xl leading-relaxed mt-2 uppercase">
             OUR ENGINEERING COMPONENTS ARE UNIVERSALLY VERIFIED AND CERTIFIED BY
             GLOBAL METALLURGICAL AUTHORITIES.
           </p>
         </div>
 
         {/* Logo Carousel */}
-        <div className="logo-marquee-shell w-full max-w-6xl mx-auto border border-white/10 bg-transparent p-10 relative rounded-lg overflow-hidden">
+        <div className="logo-marquee-shell w-full max-w-6xl mx-auto border border-blue-200/60 bg-white/80 backdrop-blur-sm p-10 relative rounded-2xl overflow-hidden shadow-sm">
           <div className="absolute top-3 left-3 w-6 h-6 border-t-2 border-l-2 border-[#d79b20]/50"></div>
           <div className="absolute top-3 right-3 w-6 h-6 border-t-2 border-r-2 border-[#d79b20]/50"></div>
           <div className="absolute bottom-3 left-3 w-6 h-6 border-b-2 border-l-2 border-[#d79b20]/50"></div>
@@ -263,7 +265,7 @@ const Hero4 = () => {
               {logos.map((logo, index) => (
                 <div
                   key={`group1-${index}`}
-                  className="agency-logo-card w-40 h-24 bg-white flex items-center justify-center p-4 rounded-lg select-none shrink-0"
+                  className="agency-logo-card w-40 h-24 bg-white border border-slate-200/80 shadow-sm flex items-center justify-center p-4 rounded-xl select-none shrink-0"
                 >
                   <img
                     src={logo.url}
@@ -280,7 +282,7 @@ const Hero4 = () => {
               {logos.map((logo, index) => (
                 <div
                   key={`group2-${index}`}
-                  className="agency-logo-card w-40 h-24 bg-white flex items-center justify-center p-4 rounded-lg select-none shrink-0"
+                  className="agency-logo-card w-40 h-24 bg-white border border-slate-200/80 shadow-sm flex items-center justify-center p-4 rounded-xl select-none shrink-0"
                 >
                   <img
                     src={logo.url}
@@ -297,8 +299,8 @@ const Hero4 = () => {
       {/* =============================== */}
       {/* SECTION 2: GLOBAL INDUSTRIAL CERTIFICATIONS */}
       {/* =============================== */}
-      <section className="w-full bg-[#0d1f4a] text-white py-20 px-6 md:px-16 lg:px-24 flex flex-col items-center relative overflow-hidden font-sans">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(215,155,32,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(215,155,32,0.05)_1px,transparent_1px)] bg-[size:48px_48px]"></div>
+      <section className="w-full bg-gradient-to-b from-[#f8fafc] via-[#f0f5fc] to-[#ffffff] text-[#0a1a52] py-20 px-6 md:px-16 lg:px-24 flex flex-col items-center relative overflow-hidden font-sans border-b border-slate-200/60">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(10,26,82,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(10,26,82,0.025)_1px,transparent_1px)] bg-[size:48px_48px] pointer-events-none"></div>
 
         <div className="flex flex-col justify-center items-center gap-5 max-w-4xl mx-auto text-center mb-16 relative z-10">
           <div className="flex items-center gap-3 mb-2">
@@ -309,12 +311,14 @@ const Hero4 = () => {
             <span className="w-10 h-0.5 bg-[#d79b20]"></span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-white uppercase leading-[1.15]">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-[#0a1a52] uppercase leading-[1.15]">
             GLOBAL INDUSTRIAL{" "}
             <span className="text-[#d79b20]">CERTIFICATIONS</span>
           </h1>
 
-          <p className="text-slate-300 text-sm md:text-base max-w-2xl leading-relaxed mt-2 uppercase">
+          <div className="w-24 h-1 bg-gradient-to-r from-[#0a1a52] to-[#d79b20] rounded-full"></div>
+
+          <p className="text-slate-600 text-sm md:text-base max-w-2xl leading-relaxed mt-2 uppercase">
             OUR COMMITMENT TO ZERO-FAILURE PERFORMANCE IS BACKED BY GLOBALLY
             RECOGNIZED TRIPLE-STANDARD CERTIFICATIONS, ENSURING ABSOLUTE
             COMPLIANCE FOR HIGH-INTEGRITY INDUSTRIAL ENVIRONMENTS.
@@ -325,19 +329,19 @@ const Hero4 = () => {
           {certifications.map((item, index) => (
             <div
               key={index}
-              className="bg-transparent backdrop-blur-md border border-white/10 rounded-2xl p-8 pt-10 flex flex-col items-center text-center transition-all duration-300 hover:border-[#d79b20]/30 hover:bg-white/5 hover:-translate-y-1 group min-h-[380px]"
+              className="bg-white border border-slate-200/90 rounded-2xl p-8 pt-10 flex flex-col items-center text-center transition-all duration-300 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-900/5 hover:-translate-y-1 group min-h-[380px] shadow-sm"
             >
-              <div className="mb-5 p-3.5 bg-[#d79b20]/10 rounded-xl border border-[#d79b20]/20 group-hover:bg-[#d79b20]/20 transition-colors duration-300">
+              <div className="mb-5 p-3.5 bg-blue-50/80 rounded-xl border border-blue-100 group-hover:bg-[#d79b20]/15 group-hover:border-[#d79b20]/30 transition-colors duration-300 text-[#0a1a52] group-hover:text-[#d79b20]">
                 {item.icon}
               </div>
-              <h3 className="text-xl font-bold tracking-wide text-white mb-4 uppercase">
+              <h3 className="text-xl font-bold tracking-wide text-[#0a1a52] mb-4 uppercase group-hover:text-blue-700 transition-colors">
                 {item.title}
               </h3>
-              <div className="w-16 h-[2px] bg-[#d79b20]/30 mb-6 group-hover:bg-[#d79b20]/60 transition-colors duration-300"></div>
-              <p className="text-slate-300 text-sm leading-relaxed mb-auto px-2 uppercase">
+              <div className="w-16 h-[2px] bg-[#d79b20]/40 mb-6 group-hover:bg-[#d79b20] transition-colors duration-300"></div>
+              <p className="text-slate-600 text-sm leading-relaxed mb-auto px-2 uppercase">
                 {item.description}
               </p>
-              <div className="mt-8 w-10 h-10 rounded-full bg-[#d79b20] flex items-center justify-center shadow-lg shadow-[#d79b20]/20 group-hover:scale-110 transition-transform duration-300">
+              <div className="mt-8 w-10 h-10 rounded-full bg-[#d79b20] flex items-center justify-center shadow-md shadow-[#d79b20]/20 group-hover:scale-110 transition-transform duration-300">
                 <FaCheckCircle className="w-5 h-5 text-white" />
               </div>
             </div>
@@ -424,29 +428,29 @@ const Hero4 = () => {
       {/* SECTION 5: STATS BANNER WITH COUNTING ANIMATION */}
       {/* =============================== */}
       <section ref={statsSectionRef} className="px-6 md:px-16 lg:px-24 mb-10">
-        <div className="max-w-7xl mx-auto bg-[#0a1a52] rounded-3xl p-10 grid grid-cols-2 md:grid-cols-5 gap-6 border border-white/10">
+        <div className="max-w-7xl mx-auto bg-gradient-to-br from-white via-blue-50/40 to-slate-50 rounded-3xl p-10 grid grid-cols-2 md:grid-cols-5 gap-6 border border-blue-200/70 shadow-lg shadow-blue-900/5">
           {stats.map((stat, idx) => {
             const Icon = stat.icon;
             const count = getCount(stat.key);
             return (
               <div
                 key={idx}
-                className="flex flex-col items-center justify-center text-center border-r border-white/10 last:border-r-0 px-4 group hover:scale-105 transition-transform duration-300"
+                className="flex flex-col items-center justify-center text-center border-r border-slate-200/80 last:border-r-0 px-4 group hover:scale-105 transition-transform duration-300"
               >
-                <div className="text-[#d79b20] mb-2">
+                <div className="text-[#0a1a52] group-hover:text-[#d79b20] transition-colors mb-2">
                   <Icon className="w-6 h-6" />
                 </div>
-                <h5 className="text-3xl md:text-4xl font-bold text-[#d79b20] transition-all duration-300">
+                <h5 className="text-3xl md:text-4xl font-black text-[#0a1a52] transition-all duration-300">
                   {count}
-                  <span className="text-lg ml-0.5">{stat.suffix}</span>
+                  <span className="text-lg ml-0.5 text-[#d79b20]">{stat.suffix}</span>
                 </h5>
-                <p className="text-white/80 text-xs md:text-sm font-medium mt-1 uppercase tracking-wider">
+                <p className="text-slate-600 text-xs md:text-sm font-bold mt-1 uppercase tracking-wider">
                   {stat.label}
                 </p>
                 {/* Progress bar */}
-                <div className="w-full max-w-[80px] h-0.5 bg-white/10 rounded-full mt-3 overflow-hidden">
+                <div className="w-full max-w-[80px] h-1 bg-slate-200/80 rounded-full mt-3 overflow-hidden">
                   <div
-                    className="h-full bg-[#d79b20] rounded-full transition-all duration-1000"
+                    className="h-full bg-gradient-to-r from-[#0a1a52] to-[#d79b20] rounded-full transition-all duration-1000"
                     style={{
                       width: isStatsVisible
                         ? `${(count / stat.target) * 100}%`
@@ -465,9 +469,9 @@ const Hero4 = () => {
       {/* =============================== */}
       <section
         ref={industriesSectionRef}
-        className="w-full bg-[#0a1a52] text-white py-20 px-6 md:px-16 lg:px-24 flex flex-col items-center relative overflow-hidden font-sans"
+        className="w-full bg-gradient-to-b from-[#ffffff] via-[#f0f5fc] to-[#f8fafc] text-[#0a1a52] py-20 px-6 md:px-16 lg:px-24 flex flex-col items-center relative overflow-hidden font-sans border-y border-slate-200/60"
       >
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(215,155,32,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(215,155,32,0.05)_1px,transparent_1px)] bg-[size:48px_48px]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(10,26,82,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(10,26,82,0.025)_1px,transparent_1px)] bg-[size:48px_48px] pointer-events-none"></div>
 
         <div className="flex flex-col justify-center items-center gap-5 max-w-4xl mx-auto text-center mb-16 relative z-10">
           <div className="flex items-center gap-3 mb-2">
@@ -478,23 +482,25 @@ const Hero4 = () => {
             <span className="w-10 h-0.5 bg-[#d79b20]"></span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-white uppercase leading-[1.15]">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-[#0a1a52] uppercase leading-[1.15]">
             INDUSTRIES WE <span className="text-[#d79b20]">POWER</span>
           </h1>
 
-          <p className="text-slate-300 text-sm md:text-base max-w-2xl leading-relaxed mt-2 uppercase">
+          <div className="w-24 h-1 bg-gradient-to-r from-[#0a1a52] to-[#d79b20] rounded-full"></div>
+
+          <p className="text-slate-600 text-sm md:text-base max-w-2xl leading-relaxed mt-2 uppercase">
             DELIVERING CERTIFIED INDUSTRIAL COMPONENTS TO MISSION-CRITICAL
             SECTORS WORLDWIDE.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto w-full relative z-10">
           {industriesData.map((card, index) => {
             const Icon = card.icon || FaIndustry;
             return (
               <div
                 key={card.id}
-                className={`group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#0a1a52]/60 shadow-xl transition-all duration-700 hover:-translate-y-2 hover:border-[#d79b20]/40 ${
+                className={`group flex flex-col overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-sm transition-all duration-700 hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-900/5 ${
                   isIndustriesVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-12"
@@ -507,7 +513,7 @@ const Hero4 = () => {
                   <img
                     src={card.image}
                     alt={card.title}
-                    className="h-56 w-full object-cover transition duration-500 group-hover:scale-110 group-hover:brightness-75"
+                    className="h-56 w-full object-cover transition duration-500 group-hover:scale-110"
                   />
                   <div className="absolute top-4 left-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#d79b20] shadow-lg">
                     <Icon className="h-6 w-6 text-white" />
@@ -515,10 +521,10 @@ const Hero4 = () => {
                 </div>
                 <div className="flex flex-1 flex-col justify-between p-6">
                   <div>
-                    <h3 className="text-xl font-bold text-white transition-colors duration-300 group-hover:text-[#d79b20] uppercase">
+                    <h3 className="text-xl font-bold text-[#0a1a52] transition-colors duration-300 group-hover:text-blue-700 uppercase">
                       {card.title}
                     </h3>
-                    <p className="mt-3 text-sm leading-6 text-slate-300 uppercase">
+                    <p className="mt-3 text-sm leading-6 text-slate-600 uppercase">
                       {card.subtitle}
                     </p>
                   </div>
@@ -550,9 +556,11 @@ const Hero4 = () => {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-[#0a1a52] uppercase leading-[1.15]">
             STRATEGIC <span className="text-[#d79b20]">PARTNERSHIPS</span>
           </h1>
+
+          <div className="w-24 h-1 bg-gradient-to-r from-[#0a1a52] to-[#d79b20] rounded-full"></div>
         </div>
 
-        <div className="w-full max-w-6xl mx-auto bg-[#0a1a52] backdrop-blur-sm p-10 relative rounded-lg overflow-hidden border border-white/10">
+        <div className="w-full max-w-6xl mx-auto bg-gradient-to-r from-slate-50 via-blue-50/30 to-slate-50 p-10 relative rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm">
           <div className="absolute top-3 left-3 w-6 h-6 border-t-2 border-l-2 border-[#d79b20]/50"></div>
           <div className="absolute top-3 right-3 w-6 h-6 border-t-2 border-r-2 border-[#d79b20]/50"></div>
           <div className="absolute bottom-3 left-3 w-6 h-6 border-b-2 border-l-2 border-[#d79b20]/50"></div>
@@ -563,7 +571,7 @@ const Hero4 = () => {
               {companylogos.map((logo, index) => (
                 <div
                   key={`group1-${index}`}
-                  className="w-40 h-24 bg-white flex items-center justify-center p-4 shadow-inner rounded-lg hover:scale-105 transition-transform duration-300 select-none shrink-0"
+                  className="w-40 h-24 bg-white border border-slate-200/80 flex items-center justify-center p-4 rounded-xl shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 select-none shrink-0"
                 >
                   <img
                     src={logo.url}
@@ -580,7 +588,7 @@ const Hero4 = () => {
               {companylogos.map((logo, index) => (
                 <div
                   key={`group2-${index}`}
-                  className="w-40 h-24 bg-white flex items-center justify-center p-4 shadow-inner rounded-lg hover:scale-105 transition-transform duration-300 select-none shrink-0"
+                  className="w-40 h-24 bg-white border border-slate-200/80 flex items-center justify-center p-4 rounded-xl shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 select-none shrink-0"
                 >
                   <img
                     src={logo.url}
@@ -597,7 +605,7 @@ const Hero4 = () => {
       {/* =============================== */}
       {/* SECTION 8: SERVICES ACCORDION */}
       {/* =============================== */}
-      <section className="bg-slate-100 py-24 px-6">
+      <section className="bg-slate-50 py-24 px-6 border-y border-slate-200/60">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-4">
@@ -612,29 +620,31 @@ const Hero4 = () => {
               ENGINEERING <span className="text-[#d79b20]">EXCELLENCE</span>
             </h2>
 
-            <p className="mt-5 max-w-2xl mx-auto text-slate-500 leading-relaxed uppercase">
+            <div className="w-24 h-1 bg-gradient-to-r from-[#0a1a52] to-[#d79b20] rounded-full mx-auto mt-4"></div>
+
+            <p className="mt-5 max-w-2xl mx-auto text-slate-600 leading-relaxed uppercase text-sm md:text-base">
               PRECISION MANUFACTURING BACKED BY TECHNICAL EXPERTISE, RIGOROUS
               INSPECTION, AND COMPLETE SUPPLY-CHAIN TRANSPARENCY.
             </p>
           </div>
 
-          <div className="flex h-[600px] bg-[#0a1a52] rounded-2xl overflow-hidden">
+          <div className="flex h-[600px] bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-xl">
             {servicesData.map((tab, index) => {
               const isActive = activeIndex === index;
               return (
                 <div
                   key={tab.id}
                   onMouseEnter={() => setActiveIndex(index)}
-                  className={`relative cursor-pointer transition-all duration-700 ease-in-out border-r border-white/10 last:border-r-0 overflow-hidden ${
+                  className={`relative cursor-pointer transition-all duration-700 ease-in-out border-r border-slate-200/80 last:border-r-0 overflow-hidden ${
                     isActive
-                      ? "flex-[5] bg-white/5"
-                      : "flex-[1.2] bg-transparent hover:bg-white/5"
+                      ? "flex-[5] bg-gradient-to-br from-[#f8fafc] via-[#f0f6ff] to-[#e8f2fc]"
+                      : "flex-[1.2] bg-white hover:bg-slate-50/80"
                   }`}
                 >
                   <div className="absolute top-7 left-7 text-[#d79b20] font-bold tracking-widest z-20">
                     {tab.id}
                   </div>
-                  <div className="absolute top-7 right-7 text-white/30 text-2xl font-light">
+                  <div className="absolute top-7 right-7 text-slate-400 text-2xl font-light">
                     +
                   </div>
 
@@ -646,11 +656,11 @@ const Hero4 = () => {
                     }`}
                   >
                     <div className="w-12 h-12 border-l-4 border-t-4 border-[#d79b20] mb-8"></div>
-                    <h2 className="text-4xl lg:text-5xl font-black text-white whitespace-pre-line leading-tight uppercase">
+                    <h2 className="text-4xl lg:text-5xl font-black text-[#0a1a52] whitespace-pre-line leading-tight uppercase">
                       {tab.title}
                     </h2>
-                    <div className="w-20 h-1 bg-gradient-to-r from-[#d79b20] to-transparent my-8"></div>
-                    <p className="max-w-md text-slate-300 leading-8 text-lg uppercase">
+                    <div className="w-20 h-1 bg-gradient-to-r from-[#d79b20] to-[#0a1a52]/20 my-8"></div>
+                    <p className="max-w-md text-slate-600 leading-8 text-lg uppercase font-medium">
                       {tab.desc}
                     </p>
                   </div>
@@ -664,7 +674,7 @@ const Hero4 = () => {
                   >
                     <div></div>
                     <div
-                      className="uppercase font-bold tracking-[0.3em] text-white/60 text-sm"
+                      className="uppercase font-bold tracking-[0.3em] text-[#0a1a52]/70 hover:text-[#0a1a52] text-sm"
                       style={{
                         writingMode: "vertical-rl",
                         transform: "rotate(180deg)",
@@ -684,7 +694,7 @@ const Hero4 = () => {
       {/* =============================== */}
       {/* SECTION 9: GLOBAL FOOTPRINT */}
       {/* =============================== */}
-      <section className="w-full bg-[#0a1a52] text-white py-20 px-6 md:px-16 lg:px-24">
+      <section className="w-full bg-gradient-to-b from-[#f8fafc] via-[#f0f4f9] to-[#ffffff] text-[#0a1a52] py-20 px-6 md:px-16 lg:px-24 border-y border-slate-200/60">
         <div className="max-w-8xl mx-auto flex flex-col lg:flex-row items-center gap-12">
           {/* LEFT CONTENT - Equal width */}
           <div className="w-full lg:w-1/2">
@@ -695,12 +705,12 @@ const Hero4 = () => {
               </span>
             </div>
 
-            <h1 className="text-4xl lg:text-5xl font-bold leading-tight uppercase">
+            <h1 className="text-4xl lg:text-5xl font-black leading-tight uppercase text-[#0a1a52]">
               GLOBAL FOOTPRINT <br />
               <span className="text-[#d79b20]">& DOMESTIC REACH</span>
             </h1>
 
-            <p className="mt-6 text-slate-300 leading-8 uppercase text-sm md:text-base">
+            <p className="mt-6 text-slate-600 leading-8 uppercase text-sm md:text-base">
               JINDUTT METAL & ALLOY PVT. LTD. OPERATES A SOPHISTICATED
               INDUSTRIAL SUPPLY CHAIN, SERVING AS A CRITICAL MATERIAL PARTNER
               FOR REFINERIES, PETROCHEMICAL PLANTS, AND POWER STATIONS ACROSS
@@ -710,19 +720,19 @@ const Hero4 = () => {
             <div className="mt-10 flex flex-wrap gap-8">
               <div>
                 <h3 className="text-4xl font-bold text-[#d79b20]">50+</h3>
-                <p className="text-sm uppercase text-white mt-2">
+                <p className="text-sm uppercase text-[#0a1a52] font-bold mt-2">
                   EXPORT COUNTRIES
                 </p>
               </div>
               <div>
                 <h3 className="text-4xl font-bold text-[#d79b20]">100+</h3>
-                <p className="text-sm uppercase text-white mt-2">
+                <p className="text-sm uppercase text-[#0a1a52] font-bold mt-2">
                   DOMESTIC HUBS
                 </p>
               </div>
               <div>
                 <h3 className="text-4xl font-bold text-[#d79b20]">500+</h3>
-                <p className="text-sm uppercase text-white mt-2">
+                <p className="text-sm uppercase text-[#0a1a52] font-bold mt-2">
                   GUARANTEED RESPONSE
                 </p>
               </div>
@@ -731,45 +741,42 @@ const Hero4 = () => {
 
           {/* RIGHT IMAGE - Equal width with full image */}
           <div className="w-full lg:w-1/2 relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-[#d79b20]/10">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl shadow-blue-900/5">
               {/* Gradient Border */}
-              <div className="absolute inset-0 p-[3px] bg-gradient-to-r from-[#d79b20] via-[#d79b20]/50 to-[#0a1a52] rounded-2xl"></div>
+              <div className="absolute inset-0 p-[2px] bg-gradient-to-r from-[#d79b20] via-blue-200 to-slate-200 rounded-2xl"></div>
 
               {/* Main Image */}
-              <div className="relative rounded-2xl overflow-hidden">
+              <div className="relative rounded-2xl overflow-hidden bg-white p-2">
                 <img
                   className="w-full h-[350px] md:h-[450px] lg:h-[500px] object-contain bg-white transition-transform duration-700 hover:scale-105"
                   src={rpmexport}
                   alt="Jindutt Metal & Alloy Pvt. Ltd."
                 />
 
-                {/* Image Overlay Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a1a52]/70 via-[#0a1a52]/20 to-transparent"></div>
-
                 {/* Overlay Information Cards */}
                 <div className="absolute bottom-6 left-6 right-6 flex flex-wrap gap-3">
-                  <div className="bg-[#0a1a52]/90 backdrop-blur-md rounded-xl px-4 py-3 border border-[#d79b20]/30 flex-1 min-w-[100px]">
+                  <div className="bg-white/95 backdrop-blur-md rounded-xl px-4 py-3 border border-slate-200 shadow-md flex-1 min-w-[100px]">
                     <p className="text-[#d79b20] text-lg font-bold">50+</p>
-                    <p className="text-white/80 text-[10px] uppercase tracking-wider">
+                    <p className="text-slate-600 text-[10px] uppercase tracking-wider font-semibold">
                       Countries Served
                     </p>
                   </div>
-                  <div className="bg-[#0a1a52]/90 backdrop-blur-md rounded-xl px-4 py-3 border border-[#d79b20]/30 flex-1 min-w-[100px]">
+                  <div className="bg-white/95 backdrop-blur-md rounded-xl px-4 py-3 border border-slate-200 shadow-md flex-1 min-w-[100px]">
                     <p className="text-[#d79b20] text-lg font-bold">100%</p>
-                    <p className="text-white/80 text-[10px] uppercase tracking-wider">
+                    <p className="text-slate-600 text-[10px] uppercase tracking-wider font-semibold">
                       Quality Assured
                     </p>
                   </div>
-                  <div className="bg-[#0a1a52]/90 backdrop-blur-md rounded-xl px-4 py-3 border border-[#d79b20]/30 flex-1 min-w-[100px]">
+                  <div className="bg-white/95 backdrop-blur-md rounded-xl px-4 py-3 border border-slate-200 shadow-md flex-1 min-w-[100px]">
                     <p className="text-[#d79b20] text-lg font-bold">24/7</p>
-                    <p className="text-white/80 text-[10px] uppercase tracking-wider">
+                    <p className="text-slate-600 text-[10px] uppercase tracking-wider font-semibold">
                       Global Support
                     </p>
                   </div>
                 </div>
 
                 {/* Top Badge */}
-                <div className="absolute top-4 right-4 bg-[#d79b20] text-[#0a1a52] px-3 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider shadow-lg">
+                <div className="absolute top-4 right-4 bg-[#d79b20] text-white px-3 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider shadow-lg">
                   ISO 9001:2015
                 </div>
 
@@ -830,8 +837,8 @@ const Hero4 = () => {
       {/* =============================== */}
       {/* SECTION 11: INTERNATIONAL EXPORT NETWORK */}
       {/* =============================== */}
-      <section className="w-full bg-[#0a1a52] text-white py-20 px-6 md:px-16 lg:px-24 flex flex-col items-center relative overflow-hidden font-sans">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(215,155,32,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(215,155,32,0.05)_1px,transparent_1px)] bg-[size:48px_48px]"></div>
+      <section className="w-full bg-gradient-to-b from-[#f8fafc] via-[#f0f4f9] to-[#ffffff] border-y border-slate-200/70 py-20 px-6 md:px-16 lg:px-24 flex flex-col items-center relative overflow-hidden font-sans">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(10,26,82,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(10,26,82,0.025)_1px,transparent_1px)] bg-[size:48px_48px] pointer-events-none"></div>
 
         <div className="flex flex-col justify-center items-center gap-5 max-w-4xl mx-auto text-center mb-16 relative z-10">
           <div className="flex items-center gap-3 mb-2">
@@ -842,13 +849,13 @@ const Hero4 = () => {
             <span className="w-10 h-0.5 bg-[#d79b20]"></span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-white uppercase leading-[1.15]">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-[#0a1a52] uppercase leading-[1.15]">
             INTERNATIONAL <span className="text-[#d79b20]">EXPORT NETWORK</span>
           </h1>
 
-          <div className="w-24 h-1 bg-gradient-to-r from-[#d79b20] to-white/30 rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-[#0a1a52] to-[#d79b20] rounded-full"></div>
 
-          <p className="text-slate-300 text-sm md:text-base max-w-2xl leading-relaxed mt-2 uppercase">
+          <p className="text-slate-600 text-sm md:text-base max-w-2xl leading-relaxed mt-2 uppercase">
             AS A PREMIER ISO CERTIFIED MANUFACTURER, JINDUTT METAL & ALLOY PVT.
             LTD. MAINTAINS A HIGH-VELOCITY EXPORT CORRIDOR, DELIVERING
             PRECISION-ENGINEERED PIPING SOLUTIONS TO OVER 50 COUNTRIES
@@ -856,14 +863,13 @@ const Hero4 = () => {
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-4 relative z-10 max-w-7xl mx-auto">
           {countries.map((country) => (
             <button
               key={country.name}
-              className="group relative flex items-center gap-4 overflow-hidden rounded-2xl border border-slate-200 bg-white px-6 py-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#d79b20] hover:shadow-xl"
+              className="group relative flex items-center gap-4 overflow-hidden rounded-2xl border border-slate-200/90 bg-white px-6 py-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-md hover:shadow-blue-900/5"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-[#d79b20] to-[#0a1a52] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-              <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-xl bg-slate-100 transition-all duration-300 group-hover:bg-white">
+              <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50 border border-slate-100 transition-all duration-300 group-hover:bg-blue-50/40 group-hover:border-blue-100">
                 <span
                   className={`fi fi-${country.code}`}
                   style={{
@@ -874,10 +880,10 @@ const Hero4 = () => {
                 />
               </div>
               <div className="relative z-10 flex flex-col items-start">
-                <span className="font-semibold text-slate-800 transition-colors duration-300 group-hover:text-white uppercase">
+                <span className="font-bold text-[#0a1a52] transition-colors duration-300 group-hover:text-blue-700 uppercase text-sm tracking-wide">
                   {country.name}
                 </span>
-                <span className="text-xs uppercase tracking-widest text-slate-500 transition-colors duration-300 group-hover:text-[#d79b20]">
+                <span className="text-[11px] font-semibold uppercase tracking-widest text-slate-400 group-hover:text-blue-600/80 transition-colors duration-300">
                   EXPORT MARKET
                 </span>
               </div>

@@ -959,39 +959,41 @@ const Contact = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mt-10 flex flex-col lg:flex-row items-center justify-between gap-6 rounded-2xl bg-[#0a1a52] p-8 shadow-xl text-white"
+            className="mt-10 flex flex-col lg:flex-row items-center justify-between gap-6 rounded-2xl bg-gradient-to-br from-white via-blue-50/50 to-white p-8 shadow-xl shadow-blue-900/5 border border-blue-200/80 text-[#0a1a52]"
           >
             <div className="flex items-start gap-4">
-              <MapPin className="mt-1 text-[#d79b20]" size={32} />
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100/70 border border-blue-200 flex-shrink-0 text-[#0a1a52]">
+                <MapPin size={26} />
+              </div>
               <div>
-                <h3 className="text-2xl font-bold uppercase text-white">
+                <h3 className="text-2xl font-bold uppercase text-[#0a1a52]">
                   Head Office
                 </h3>
-                <p className="mt-3 leading-7 text-slate-300 text-sm">
+                <p className="mt-2 leading-7 text-slate-600 text-sm">
                   1st Floor, New No.22 Old No.44,
                   <br />
                   Post Office Street, Parrys,
                   <br />
                   Chennai - 600001, Tamil Nadu
                 </p>
-                <div className="mt-3 flex flex-wrap gap-4 text-sm">
+                <div className="mt-3 flex flex-wrap gap-4 text-sm font-medium">
                   <a
                     href="tel:+919167631676"
-                    className="text-slate-300 hover:text-[#d79b20] transition-colors flex items-center gap-2"
+                    className="text-slate-600 hover:text-[#0a1a52] transition-colors flex items-center gap-2"
                   >
-                    <Phone size={14} /> +91 9167631676
+                    <Phone size={14} className="text-blue-600" /> +91 9167631676
                   </a>
                   <a
                     href="tel:+919967078222"
-                    className="text-slate-300 hover:text-[#d79b20] transition-colors flex items-center gap-2"
+                    className="text-slate-600 hover:text-[#0a1a52] transition-colors flex items-center gap-2"
                   >
-                    <Phone size={14} /> +91 9967078222
+                    <Phone size={14} className="text-blue-600" /> +91 9967078222
                   </a>
                   <a
                     href="mailto:info@jinduttmetal.com"
-                    className="text-slate-300 hover:text-[#d79b20] transition-colors flex items-center gap-2"
+                    className="text-slate-600 hover:text-[#0a1a52] transition-colors flex items-center gap-2"
                   >
-                    <Mail size={14} /> info@jinduttmetal.com
+                    <Mail size={14} className="text-blue-600" /> info@jinduttmetal.com
                   </a>
                 </div>
               </div>
@@ -1001,9 +1003,9 @@ const Contact = () => {
               href="https://maps.app.goo.gl/EQLmXyu12hGPeuM77?g_st=ac"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 rounded-full bg-[#d79b20] hover:bg-[#c08a1a] px-8 py-4 text-lg font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#d79b20]/25"
+              className="inline-flex items-center gap-3 rounded-full bg-[#0a1a52] hover:bg-[#122a6e] px-8 py-4 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-1 shadow-lg shadow-[#0a1a52]/20"
             >
-              <Navigation size={20} />
+              <Navigation size={18} />
               Get Directions
             </a>
           </motion.div>
@@ -1013,10 +1015,10 @@ const Contact = () => {
       {/* =============================== */}
       {/* WAREHOUSE FOOTER */}
       {/* =============================== */}
-      <section className="w-full py-4 bg-[#0a1a52] flex items-center justify-center border-t border-[#d79b20]/20">
-        <h6 className="flex items-center gap-3 text-white text-sm md:text-base font-medium px-4 text-center">
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#d79b20] flex-shrink-0">
-            <Diamond size={16} className="text-[#0a1a52] fill-[#0a1a52]" />
+      <section className="w-full py-4 bg-gradient-to-r from-blue-50/70 via-white to-blue-50/70 flex items-center justify-center border-t border-blue-200/70">
+        <h6 className="flex items-center gap-3 text-[#0a1a52] text-sm md:text-base font-semibold px-4 text-center">
+          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-100 border border-blue-200 flex-shrink-0">
+            <Diamond size={13} className="text-[#0a1a52] fill-[#0a1a52]" />
           </span>
           Operational Warehouse: 333-9, Post Office St, Mannadi, George Town,
           Chennai, Greater Chennai, Tamil Nadu 600001

@@ -58,22 +58,29 @@ const MaterialDetail = () => {
 
   // Generic product detail page (fallback)
   return (
-    <section className="bg-gray-50 min-h-screen">
+    <section className="bg-slate-50 min-h-screen">
       {/* Hero Banner */}
-      <div
-        className="relative h-56 sm:h-64 md:h-72 lg:h-80 bg-cover bg-center"
-        style={{ backgroundImage: `url(${bannerIndustrial})` }}
-      >
-        <div className="absolute inset-0 bg-[#0a1a52]/85"></div>
-        <div className="relative max-w-7xl mx-auto h-full flex items-center px-5 sm:px-8 lg:px-10">
+      <div className="relative bg-gradient-to-r from-blue-50/90 via-white to-blue-50/90 border-b border-blue-200/70 py-12 sm:py-16 lg:py-20 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-10 mix-blend-multiply pointer-events-none"
+          style={{ backgroundImage: `url(${bannerIndustrial})` }}
+        />
+        <div
+          className="absolute inset-0 opacity-[0.035] pointer-events-none"
+          style={{
+            backgroundImage: `radial-gradient(#0a1a52 1px, transparent 1px)`,
+            backgroundSize: "24px 24px",
+          }}
+        />
+        <div className="relative max-w-7xl mx-auto flex items-center px-5 sm:px-8 lg:px-10">
           <div className="max-w-3xl">
-            <span className="inline-block bg-[#d79b20] text-white text-xs font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3">
+            <span className="inline-block bg-[#0a1a52] text-white text-xs font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3 shadow-sm">
               {material.name}
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0a1a52] leading-tight">
               {item.title}
             </h1>
-            <p className="text-lg text-gray-200 mt-3 max-w-2xl">
+            <p className="text-lg text-slate-600 mt-3 max-w-2xl font-normal">
               Premium Quality Material for Demanding Industrial Applications
             </p>
           </div>

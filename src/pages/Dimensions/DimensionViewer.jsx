@@ -51,28 +51,28 @@ const DimensionViewer = () => {
   return (
     <div className="h-[calc(100vh-80px)] bg-slate-50 flex flex-col overflow-hidden">
       {/* Header - Premium */}
-      <div className="bg-gradient-to-r from-[#0a1a52] to-[#1a3a7a] border-b border-[#d79b20]/20 flex-shrink-0">
+      <div className="bg-gradient-to-r from-blue-50/90 via-white to-blue-50/90 border-b border-blue-200/80 shadow-sm flex-shrink-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 py-3 sm:py-4">
             {/* Left Section */}
             <div className="flex items-center gap-2 min-w-0">
               <Link
                 to="/dimensions"
-                className="text-white/60 hover:text-white transition-colors p-1.5 rounded-lg hover:bg-white/10 flex-shrink-0"
+                className="text-slate-500 hover:text-[#0a1a52] transition-colors p-1.5 rounded-lg hover:bg-blue-100/60 flex-shrink-0"
                 aria-label="Back to Dimensions"
               >
                 <ArrowLeft className="w-5 h-5" />
               </Link>
 
               <div className="flex items-center gap-2 min-w-0">
-                <div className="hidden sm:flex h-8 w-8 items-center justify-center rounded-lg bg-[#d79b20]/20 text-[#d79b20] flex-shrink-0">
+                <div className="hidden sm:flex h-8 w-8 items-center justify-center rounded-lg bg-blue-100 border border-blue-200 text-[#0a1a52] flex-shrink-0">
                   <Ruler className="w-4 h-4" />
                 </div>
                 <div className="min-w-0">
-                  <h1 className="text-sm sm:text-base font-bold text-white truncate">
+                  <h1 className="text-sm sm:text-base font-bold text-[#0a1a52] truncate">
                     {dimension.name}
                   </h1>
-                  <p className="text-xs text-slate-300 truncate">
+                  <p className="text-xs text-slate-500 truncate">
                     Dimension Chart • Technical Specifications
                   </p>
                 </div>
@@ -85,7 +85,7 @@ const DimensionViewer = () => {
                 href={dimension.pdf}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-lg border border-white/20 hover:bg-white/10 px-2.5 py-1.5 text-xs font-medium text-white transition-all duration-200 hover:border-white/40"
+                className="inline-flex items-center gap-1.5 rounded-lg border border-blue-200 bg-white hover:bg-blue-50 px-2.5 py-1.5 text-xs font-medium text-[#0a1a52] transition-all duration-200 shadow-sm"
               >
                 <ExternalLink className="w-3.5 h-3.5" />
                 <span className="hidden sm:inline">Open</span>
@@ -94,7 +94,7 @@ const DimensionViewer = () => {
               <a
                 href={dimension.pdf}
                 download
-                className="inline-flex items-center gap-1.5 rounded-lg bg-[#d79b20] hover:bg-[#c08a1a] px-2.5 py-1.5 text-xs font-medium text-white transition-all duration-200 hover:shadow-lg hover:shadow-[#d79b20]/25"
+                className="inline-flex items-center gap-1.5 rounded-lg bg-[#0a1a52] hover:bg-[#122a6e] px-2.5 py-1.5 text-xs font-medium text-white transition-all duration-200 shadow-sm"
               >
                 <Download className="w-3.5 h-3.5" />
                 <span className="hidden sm:inline">Download</span>
@@ -102,7 +102,7 @@ const DimensionViewer = () => {
 
               <button
                 onClick={() => window.print()}
-                className="inline-flex items-center gap-1.5 rounded-lg border border-white/20 hover:bg-white/10 px-2.5 py-1.5 text-xs font-medium text-white transition-all duration-200 hover:border-white/40"
+                className="inline-flex items-center gap-1.5 rounded-lg border border-blue-200 bg-white hover:bg-blue-50 px-2.5 py-1.5 text-xs font-medium text-[#0a1a52] transition-all duration-200 shadow-sm"
               >
                 <Printer className="w-3.5 h-3.5" />
                 <span className="hidden sm:inline">Print</span>
@@ -117,7 +117,7 @@ const DimensionViewer = () => {
                     }
                   }
                 }}
-                className="inline-flex items-center gap-1.5 rounded-lg border border-white/20 hover:bg-white/10 px-2.5 py-1.5 text-xs font-medium text-white transition-all duration-200 hover:border-white/40"
+                className="inline-flex items-center gap-1.5 rounded-lg border border-blue-200 bg-white hover:bg-blue-50 px-2.5 py-1.5 text-xs font-medium text-[#0a1a52] transition-all duration-200 shadow-sm"
               >
                 <Maximize2 className="w-3.5 h-3.5" />
                 <span className="hidden sm:inline">Fullscreen</span>

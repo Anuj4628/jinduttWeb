@@ -6,37 +6,42 @@ import bannerIndustrial from "../../assets/images/productImage/banner-industrial
 
 const Materials = () => {
   return (
-    <section className="bg-gray-50 min-h-screen">
+    <section className="bg-slate-50 min-h-screen">
       {/* Hero Banner - Premium */}
-      <div
-        className="relative h-56 sm:h-64 md:h-80 lg:h-96 bg-cover bg-center"
-        style={{ backgroundImage: `url(${bannerIndustrial})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0a1a52]/90 to-[#0a1a52]/70"></div>
-        <div className="absolute inset-0 bg-[url('/src/assets/images/pattern-dots.svg')] opacity-10"></div>
-        <div className="relative max-w-7xl mx-auto h-full flex items-center px-5 sm:px-8 lg:px-10">
+      <div className="relative bg-gradient-to-r from-blue-50/90 via-white to-blue-50/90 border-b border-blue-200/70 py-12 sm:py-16 lg:py-20 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-10 mix-blend-multiply pointer-events-none"
+          style={{ backgroundImage: `url(${bannerIndustrial})` }}
+        />
+        <div
+          className="absolute inset-0 opacity-[0.035] pointer-events-none"
+          style={{
+            backgroundImage: `radial-gradient(#0a1a52 1px, transparent 1px)`,
+            backgroundSize: "24px 24px",
+          }}
+        />
+        <div className="relative max-w-7xl mx-auto flex items-center px-5 sm:px-8 lg:px-10">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-4">
               <span className="w-12 h-0.5 bg-[#d79b20]"></span>
-              <span className="text-[#d79b20] text-sm font-semibold uppercase tracking-widest">
+              <span className="text-[#0a1a52] text-sm font-bold uppercase tracking-widest">
                 Our Range
               </span>
             </div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-[#0a1a52] leading-tight">
               Materials
             </h1>
-            <p className="text-lg sm:text-xl text-gray-200 mt-4 max-w-2xl leading-relaxed">
+            <p className="text-lg sm:text-xl text-slate-600 mt-4 max-w-2xl leading-relaxed font-normal">
               Explore our comprehensive range of high-performance materials for
               industrial applications
             </p>
             <div className="flex items-center gap-4 mt-6">
-              <span className="inline-flex items-center gap-2 text-white/80 text-sm">
+              <span className="inline-flex items-center gap-2 text-slate-700 font-semibold text-sm bg-white/80 border border-blue-200/80 px-3.5 py-1.5 rounded-full shadow-sm">
                 <span className="w-2 h-2 bg-[#d79b20] rounded-full"></span>
                 {materials.length}+ Materials Available
               </span>
-              <span className="w-px h-6 bg-white/20"></span>
-              <span className="inline-flex items-center gap-2 text-white/80 text-sm">
-                <span className="w-2 h-2 bg-[#d79b20] rounded-full"></span>
+              <span className="inline-flex items-center gap-2 text-slate-700 font-semibold text-sm bg-white/80 border border-blue-200/80 px-3.5 py-1.5 rounded-full shadow-sm">
+                <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
                 Premium Quality
               </span>
             </div>

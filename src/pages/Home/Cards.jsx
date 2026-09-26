@@ -10,11 +10,11 @@ import {
 
 import pipe from "../../assets/images/productImage/steel-pipes.webp";
 import plates from "../../assets/images/productImage/plates.webp";
-import rod from "../../assets/images/productImage/rod.webp";
-import flanges from "../../assets/images/productImage/Flanges.webp";
-import fastener from "../../assets/images/productImage/fastener.webp";
 import buttweld from "../../assets/images/productImage/buttweld.webp";
-import coil from "../../assets/images/productImage/coil.webp";
+import forgedFittings from "../../assets/images/productImage/forged-fittings.webp";
+import flanges from "../../assets/images/productImage/Flanges.webp";
+import rod from "../../assets/images/productImage/rod.webp";
+import fastener from "../../assets/images/productImage/fastener.webp";
 import valves from "../../assets/images/productImage/valves.webp";
 
 const cardData = [
@@ -38,15 +38,24 @@ const cardData = [
   },
   {
     id: 3,
-    title: "ROD & BAR",
+    title: "BUTT WELD FITTINGS",
     subtitle: "COMPONENT RANGE",
-    image: rod,
-    link: "/products/round-bars",
+    image: buttweld,
+    link: "/products/buttweld-fittings",
     icon: FaIndustry,
-    description: "Precision rods and bars for critical applications",
+    description: "Precision buttweld fittings for piping systems",
   },
   {
     id: 4,
+    title: "FORGED FITTINGS",
+    subtitle: "COMPONENT RANGE",
+    image: forgedFittings,
+    link: "/products/forged-fittings",
+    icon: FaIndustry,
+    description: "High-pressure forged fittings for critical environments",
+  },
+  {
+    id: 5,
     title: "FLANGES",
     subtitle: "COMPONENT RANGE",
     image: flanges,
@@ -55,31 +64,22 @@ const cardData = [
     description: "High-strength flanges for secure connections",
   },
   {
-    id: 5,
+    id: 6,
+    title: "RODS & BARS",
+    subtitle: "COMPONENT RANGE",
+    image: rod,
+    link: "/products/round-bars",
+    icon: FaIndustry,
+    description: "Precision rods and bars for critical applications",
+  },
+  {
+    id: 7,
     title: "FASTENERS",
     subtitle: "COMPONENT RANGE",
     image: fastener,
     link: "/products/fasteners",
     icon: FaIndustry,
     description: "Reliable fasteners for demanding environments",
-  },
-  {
-    id: 6,
-    title: "BUTTWELD FITTINGS",
-    subtitle: "COMPONENT RANGE",
-    image: buttweld,
-    link: "/products/buttweld-fittings",
-    icon: FaIndustry,
-    description: "Precision buttweld fittings for piping systems",
-  },
-  {
-    id: 7,
-    title: "COILS",
-    subtitle: "COMPONENT RANGE",
-    image: coil,
-    link: "/products/coils",
-    icon: FaIndustry,
-    description: "High-quality coils for continuous processing",
   },
   {
     id: 8,

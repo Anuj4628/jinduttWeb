@@ -50,6 +50,8 @@ const productMaterials = {
 
   "forged-fittings": forgedfitting,
   "dairy-fittings": dairyfitting,
+  "pipes-tubes": [...pipes, ...tubes],
+  "sheets-plates": [...sheets, ...plates],
 };
 
 export default productMaterials;

@@ -1,4 +1,4 @@
-﻿// src/components/common/Footer.jsx
+// src/components/common/Footer.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 import { MdCall } from "react-icons/md";

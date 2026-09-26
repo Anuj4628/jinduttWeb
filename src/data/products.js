@@ -84,7 +84,7 @@ const products = [
   },
   {
     id: 4,
-    name: "Rod & Round Bars",
+    name: "Rods & Bars",
     slug: "round-bars",
     image: roundBarsImg,
     icon: Circle,
@@ -279,5 +279,159 @@ const products = [
     shortDescription: "Industrial wire mesh for filtration and screening.",
   },
 ];
+
+// Product Mega-Menu 2-Section Structure (12 entries each)
+export const productMenuSections = {
+  section1: [
+    {
+      name: "Pipes & Tubes",
+      slug: "pipes-tubes",
+      icon: Cylinder,
+      badge: "Pipes + Tubes",
+      description: "Seamless & welded pipes and precision tubes",
+    },
+    {
+      name: "Sheets & Plates",
+      slug: "sheets-plates",
+      icon: Square,
+      badge: "Sheets + Plates",
+      description: "Cold & hot rolled sheets and heavy industrial plates",
+    },
+    {
+      name: "Butt Weld Fittings",
+      slug: "buttweld-fittings",
+      icon: GitBranch,
+      description: "Elbows, tees, reducers & caps to ASME / ASTM standards",
+    },
+    {
+      name: "Forged Fittings",
+      slug: "forged-fittings",
+      icon: Wrench,
+      description: "High-pressure 2000# to 9000# socket weld & threaded fittings",
+    },
+    {
+      name: "Flanges",
+      slug: "flanges",
+      icon: Settings,
+      description: "Slip-on, blind, weld neck & socket weld flanges",
+    },
+    {
+      name: "Rods & Bars",
+      slug: "round-bars",
+      icon: Circle,
+      description: "Bright finish, black & precision-ground round bars",
+    },
+    {
+      name: "Fasteners",
+      slug: "fasteners",
+      icon: Nut,
+      description: "Hex bolts, nuts, studs, washers & heavy industrial fasteners",
+    },
+    {
+      name: "Industrial Valves",
+      slug: "valves",
+      icon: GaugeCircle,
+      description: "Gate, globe, check, ball & butterfly valves for critical flow",
+    },
+    {
+      name: "Coils",
+      slug: "coils",
+      icon: ScrollText,
+      description: "Precision slit coils, hot & cold rolled strip coils",
+    },
+    {
+      name: "Wires",
+      slug: "wires",
+      icon: Cable,
+      description: "TIG, MIG, filler & industrial spring wires",
+    },
+    {
+      name: "Wire Mesh",
+      slug: "wire-mesh",
+      icon: Network,
+      description: "Woven, welded & Dutch weave mesh for filtration",
+    },
+    {
+      name: "Hose Pipe",
+      slug: "hose-pipe",
+      icon: Waves,
+      description: "Corrugated flexible metal hose & chemical transfer hoses",
+    },
+  ],
+  section2: [
+    {
+      name: "Dairy Valves",
+      slug: "dairy-pharma-valves",
+      icon: ShieldCheck,
+      description: "Sanitary butterfly, sampling & plug valves for dairy processing",
+    },
+    {
+      name: "Pharma Valves",
+      slug: "dairy-pharma-valves",
+      icon: ShieldCheck,
+      description: "High-purity hygienic diaphragm & aseptic pharma valves",
+    },
+    {
+      name: "Dairy Fittings",
+      slug: "dairy-fittings",
+      icon: Milk,
+      description: "Sanitary SMS, DIN, TC clamps, bends & tri-clover fittings",
+    },
+    {
+      name: "Pharma Fittings",
+      slug: "pharma-fittings",
+      icon: FlaskConical,
+      description: "Electro-polished aseptic bends, tees & ferrules",
+    },
+    {
+      name: "Anchor Fasteners",
+      slug: "anchor-fastener",
+      icon: Bolt,
+      description: "Wedge, sleeve, drop-in & chemical heavy-duty anchors",
+    },
+    {
+      name: "Perforated Sheets",
+      slug: "perforated-sheet",
+      icon: Grid2X2,
+      description: "Round, square & slotted custom perforated metal sheets",
+    },
+    {
+      name: "Patta Patti",
+      slug: "patta-patti",
+      icon: RectangleHorizontal,
+      description: "Slit flat bars, patta patti & decorative stainless strips",
+    },
+    {
+      name: "Strips",
+      slug: "strips",
+      icon: AlignHorizontalSpaceAround,
+      description: "Cold rolled precision narrow & wide metal strips",
+    },
+    {
+      name: "Rings",
+      slug: "rings",
+      icon: Disc3,
+      description: "Forged & rolled seamless alloy rings & bluing rings",
+    },
+    {
+      name: "Circles",
+      slug: "circles",
+      icon: CircleDot,
+      description: "High-accuracy cold sheared & laser-cut circular blanks",
+    },
+    {
+      name: "Structural Angles",
+      slug: "angle-channels",
+      icon: Columns3,
+      description: "Equal & unequal hot rolled stainless steel angles",
+    },
+    {
+      name: "Structural Channels",
+      slug: "angle-channels",
+      icon: Columns3,
+      description: "U-channels & C-channels for structural fabrication",
+    },
+  ],
+};
 
 export default products;

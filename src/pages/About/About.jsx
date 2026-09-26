@@ -347,7 +347,10 @@ const About = () => {
       {/* =============================== */}
       {/* INDUSTRIES SECTION */}
       {/* =============================== */}
-      <section className="w-full py-20 bg-[#0a1a52]">
+      {/* =============================== */}
+      {/* INDUSTRIES SECTION */}
+      {/* =============================== */}
+      <section className="w-full py-20 bg-gradient-to-b from-[#f8fafc] via-[#f0f4f9] to-[#ffffff] border-y border-slate-200/70">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-14">
             <div className="flex items-center justify-center gap-3 mb-4">
@@ -358,16 +361,18 @@ const About = () => {
               <span className="w-12 h-0.5 bg-[#d79b20]"></span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-black text-white leading-tight">
+            <h2 className="text-4xl md:text-5xl font-black text-[#0a1a52] leading-tight uppercase">
               INDUSTRIES WE <span className="text-[#d79b20]">SERVE</span>
             </h2>
+
+            <div className="w-24 h-1 bg-gradient-to-r from-[#0a1a52] to-[#d79b20] rounded-full mx-auto mt-4"></div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {industriesData.map((industry, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-2xl cursor-pointer"
+                className="group relative overflow-hidden rounded-2xl cursor-pointer bg-white border border-slate-200/90 shadow-sm hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 hover:-translate-y-1.5 hover:border-blue-300"
               >
                 <img
                   src={industry.image}
@@ -375,17 +380,17 @@ const About = () => {
                   className="w-full h-80 object-cover transition duration-700 group-hover:scale-110"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a1a52] via-[#0a1a52]/40 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a1a52]/90 via-[#0a1a52]/30 to-transparent"></div>
 
                 <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="text-white text-2xl font-bold">
+                  <h3 className="text-white text-2xl font-black uppercase tracking-tight">
                     {industry.title}
                   </h3>
                   <div className="w-12 h-0.5 bg-[#d79b20] mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
 
-                <div className="absolute top-4 right-4 bg-[#d79b20]/20 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <FaArrowRight className="w-4 h-4 text-[#d79b20]" />
+                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full p-2.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-sm">
+                  <FaArrowRight className="w-4 h-4 text-[#0a1a52]" />
                 </div>
               </div>
             ))}
@@ -397,8 +402,8 @@ const About = () => {
       {/* CTA SECTION */}
       {/* =============================== */}
       <section className="relative max-w-7xl mx-auto px-6 lg:px-8 pb-20 mt-20">
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#0a1a52] via-[#1a3a7a] to-[#0a1a52] py-16 px-8 lg:px-16">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-[#d79b20]/5 rounded-full blur-3xl"></div>
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-white via-blue-50/60 to-slate-50 border border-blue-200/80 shadow-xl shadow-blue-900/5 py-16 px-8 lg:px-16">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-blue-400/5 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#d79b20]/5 rounded-full blur-3xl"></div>
 
           <div className="relative flex flex-col lg:flex-row items-center justify-between gap-10">
@@ -410,14 +415,14 @@ const About = () => {
                 </span>
               </div>
 
-              <h2 className="text-4xl md:text-5xl font-black leading-[1.1] text-white">
+              <h2 className="text-4xl md:text-5xl font-black leading-[1.1] text-[#0a1a52]">
                 Looking For A <br />
                 <span className="text-[#d79b20]">Reliable</span> Industrial{" "}
                 <br />
                 Metal Partner?
               </h2>
 
-              <p className="mt-6 max-w-xl text-lg text-blue-100/80 leading-relaxed">
+              <p className="mt-6 max-w-xl text-lg text-slate-600 leading-relaxed font-medium">
                 From stainless steel piping solutions to specialty alloys,
                 Jindutt Metal & Alloy Pvt. Ltd. Export delivers quality products
                 with global reach and dependable support.
@@ -427,7 +432,7 @@ const About = () => {
             <div className="flex flex-col sm:flex-row gap-4 flex-shrink-0">
               <Link
                 to="/contact"
-                className="group bg-[#d79b20] hover:bg-[#c08a1a] text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#d79b20]/25 flex items-center justify-center gap-2"
+                className="group bg-[#0a1a52] hover:bg-[#122a6e] text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#0a1a52]/25 flex items-center justify-center gap-2"
               >
                 Get A Quote
                 <FaArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -435,7 +440,7 @@ const About = () => {
 
               <Link
                 to="/products"
-                className="border-2 border-white/30 hover:border-white text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 hover:bg-white/10 flex items-center justify-center gap-2"
+                className="border-2 border-[#0a1a52]/20 hover:border-[#0a1a52] hover:bg-slate-100 text-[#0a1a52] font-semibold px-8 py-4 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2"
               >
                 View Products
                 <FaArrowRight className="w-4 h-4" />

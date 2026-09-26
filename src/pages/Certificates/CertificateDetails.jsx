@@ -47,22 +47,20 @@ const CertificateDetails = () => {
 
   return (
     <section className="min-h-screen bg-slate-50">
-      {/* HERO - Premium */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-[#0a1a52] via-[#0d2a6a] to-[#1a4a8a] pt-24 pb-32">
+      {/* HERO - Light Premium Theme */}
+      <div className="relative overflow-hidden bg-gradient-to-b from-[#f8fafc] via-[#f0f4f9] to-[#ffffff] border-b border-slate-200/80 pt-16 pb-28">
         {/* Decorative Elements */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#d79b20]/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-300/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#d79b20]/5 rounded-full blur-3xl"></div>
 
         {/* Background Grid */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="h-full w-full bg-[linear-gradient(rgba(255,255,255,.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.08)_1px,transparent_1px)] bg-[size:60px_60px]" />
-        </div>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(10,26,82,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(10,26,82,0.025)_1px,transparent_1px)] bg-[size:48px_48px] pointer-events-none"></div>
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           {/* Back Button */}
           <Link
             to="/certificates"
-            className="inline-flex items-center gap-2 text-white/60 hover:text-white transition-colors text-sm font-medium mb-6 group"
+            className="inline-flex items-center gap-2 text-slate-500 hover:text-[#0a1a52] transition-colors text-sm font-semibold mb-6 group"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Back to Certificates
@@ -70,9 +68,9 @@ const CertificateDetails = () => {
 
           {/* Badge */}
           <div className="flex">
-            <div className="inline-flex items-center gap-2.5 rounded-full bg-[#d79b20]/20 border border-[#d79b20]/30 px-5 py-2 backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2.5 rounded-full bg-blue-50 border border-blue-200/80 px-5 py-2 shadow-sm">
               <ShieldCheck className="w-4 h-4 text-[#d79b20]" />
-              <span className="text-xs font-semibold uppercase tracking-[0.3em] text-[#d79b20]">
+              <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#0a1a52]">
                 Verified Certificate
               </span>
             </div>
@@ -80,25 +78,27 @@ const CertificateDetails = () => {
 
           {/* Title */}
           <div className="mt-6 max-w-4xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#0a1a52] leading-tight uppercase">
               {certificate.name}
             </h1>
 
-            <p className="mt-4 text-base md:text-lg leading-relaxed text-slate-300 max-w-3xl">
+            <div className="w-24 h-1 bg-gradient-to-r from-[#0a1a52] to-[#d79b20] rounded-full my-4"></div>
+
+            <p className="mt-4 text-base md:text-lg leading-relaxed text-slate-600 max-w-3xl">
               {certificate.description}
             </p>
 
             {/* Meta Info */}
             <div className="flex flex-wrap items-center gap-6 mt-6">
-              <div className="flex items-center gap-2 text-sm text-slate-300">
+              <div className="flex items-center gap-2 text-sm text-slate-600 font-medium">
                 <Award className="w-4 h-4 text-[#d79b20]" />
                 <span>Verified Document</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-slate-300">
+              <div className="flex items-center gap-2 text-sm text-slate-600 font-medium">
                 <Star className="w-4 h-4 text-[#d79b20]" />
                 <span>Industry Standard</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-slate-300">
+              <div className="flex items-center gap-2 text-sm text-slate-600 font-medium">
                 <CheckCircle className="w-4 h-4 text-[#d79b20]" />
                 <span>Official Copy</span>
               </div>
