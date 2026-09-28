@@ -7,6 +7,7 @@ import hero2 from "../../assets/images/industries/hero2.png";
 import hero3 from "../../assets/images/industries/hero3.png";
 import hero4 from "../../assets/images/industries/hero4.png";
 import hero5 from "../../assets/images/industries/hero5.png";
+import { CATALOG_PDF } from "../../data/catalog";
 
 // ✅ FIXED: All slides now have unique images
 const slides = [
@@ -121,6 +122,14 @@ const Hero1 = () => {
                   Explore Products
                   <FaArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
+                <a
+                  href={CATALOG_PDF}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white/30 hover:border-white text-white font-semibold px-8 py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-1 flex items-center gap-2"
+                >
+                  Explore Catalog
+                </a>
                 <Link
                   to="/contact"
                   className="border-2 border-white/30 hover:border-white text-white font-semibold px-8 py-3.5 rounded-xl transition-all duration-300 hover:bg-white/10"

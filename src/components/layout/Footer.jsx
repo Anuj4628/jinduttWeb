@@ -5,6 +5,7 @@ import { MdCall } from "react-icons/md";
 import { FaMapMarkerAlt, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 import { HiChevronRight } from "react-icons/hi";
 import logo from "../../assets/images/logo/jindutt-logo.png";
+import { CATALOG_PDF } from "../../data/catalog";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -51,6 +52,17 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
+              <li>
+                <a
+                  href={CATALOG_PDF}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-300 hover:text-[#d79b20] transition-colors text-base flex items-center gap-2"
+                >
+                  <HiChevronRight className="w-4 h-4 text-[#d79b20]" />
+                  Catalog
+                </a>
+              </li>
             </ul>
           </div>
 

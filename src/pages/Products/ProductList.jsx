@@ -9,9 +9,11 @@ import {
   LayoutGrid,
   Package,
   ArrowRight,
+  FileText,
 } from "lucide-react";
 import productsData from "../../data/products.js";
 import bannerIndustrial from "../../assets/images/productImage/banner-industrial.webp";
+import { CATALOG_PDF } from "../../data/catalog";
 
 const ProductList = () => {
   const { category } = useParams();
@@ -105,7 +107,7 @@ const ProductList = () => {
                 ? `Premium quality ${categoryName.toLowerCase()} products for your industrial needs`
                 : "Explore our complete range of premium industrial products"}
             </p>
-            <div className="flex items-center gap-4 mt-5">
+            <div className="flex flex-wrap items-center gap-4 mt-5">
               <span className="inline-flex items-center gap-2 text-slate-700 font-semibold text-sm bg-white/80 border border-blue-200/80 px-3.5 py-1.5 rounded-full shadow-sm">
                 <span className="w-2 h-2 bg-[#d79b20] rounded-full"></span>
                 {allProducts.length} Products
@@ -114,6 +116,15 @@ const ProductList = () => {
                 <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
                 Premium Quality
               </span>
+              <a
+                href={CATALOG_PDF}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-white font-semibold text-sm bg-[#0a1a52] hover:bg-[#d79b20] px-4 py-1.5 rounded-full shadow-sm transition-all duration-300 hover:shadow-md"
+              >
+                <FileText className="w-3.5 h-3.5" />
+                View Complete Catalog
+              </a>
             </div>
           </div>
         </div>
@@ -318,6 +329,30 @@ const ProductList = () => {
               </div>
             </Link>
           ))}
+        </div>
+
+        {/* Catalog Banner */}
+        <div className="mt-16 bg-gradient-to-r from-[#0a1a52] via-[#0d226b] to-[#0a1a52] rounded-2xl p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+          <div>
+            <span className="text-[#d79b20] text-xs font-bold uppercase tracking-widest block mb-1">
+              Official Documentation
+            </span>
+            <h3 className="text-2xl font-bold">
+              Looking for our complete product specifications?
+            </h3>
+            <p className="text-slate-300 text-sm mt-1 max-w-xl">
+              View our complete product catalog with comprehensive technical data, alloy compositions, and dimension charts.
+            </p>
+          </div>
+          <a
+            href={CATALOG_PDF}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-[#d79b20] hover:bg-[#c08a1a] text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 hover:-translate-y-0.5 shadow-lg shadow-[#d79b20]/25 flex-shrink-0"
+          >
+            <span>View Complete Catalog</span>
+            <ArrowRight className="w-4 h-4" />
+          </a>
         </div>
 
         {/* Empty State */}

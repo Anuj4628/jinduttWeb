@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import materials from "../../data/materials";
 import bannerIndustrial from "../../assets/images/productImage/banner-industrial.webp";
+import { CATALOG_PDF } from "../../data/catalog";
 
 const Materials = () => {
   return (
@@ -35,7 +36,7 @@ const Materials = () => {
               Explore our comprehensive range of high-performance materials for
               industrial applications
             </p>
-            <div className="flex items-center gap-4 mt-6">
+            <div className="flex flex-wrap items-center gap-4 mt-6">
               <span className="inline-flex items-center gap-2 text-slate-700 font-semibold text-sm bg-white/80 border border-blue-200/80 px-3.5 py-1.5 rounded-full shadow-sm">
                 <span className="w-2 h-2 bg-[#d79b20] rounded-full"></span>
                 {materials.length}+ Materials Available
@@ -44,6 +45,14 @@ const Materials = () => {
                 <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
                 Premium Quality
               </span>
+              <a
+                href={CATALOG_PDF}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-white font-semibold text-sm bg-[#0a1a52] hover:bg-[#d79b20] px-4 py-1.5 rounded-full shadow-sm transition-all duration-300"
+              >
+                Explore Catalog
+              </a>
             </div>
           </div>
         </div>
@@ -151,10 +160,18 @@ const Materials = () => {
 
         {/* Bottom CTA */}
         <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-6 bg-white rounded-full px-6 py-3 shadow-lg border border-gray-100">
+          <div className="inline-flex flex-wrap items-center justify-center gap-4 bg-white rounded-full px-6 py-3 shadow-lg border border-gray-100">
             <span className="text-sm text-gray-600">
               Can't find what you're looking for?
             </span>
+            <a
+              href={CATALOG_PDF}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-[#d79b20] hover:bg-[#d79b20] text-[#0a1a52] hover:text-white text-sm font-semibold px-5 py-2 rounded-full transition duration-200"
+            >
+              Explore Catalog
+            </a>
             <Link
               to="/contact"
               className="bg-[#0a1a52] hover:bg-[#122a6e] text-white text-sm font-semibold px-6 py-2 rounded-full transition duration-200"

@@ -18,10 +18,12 @@ import {
   Loader2,
   MessageCircle,
   X,
+  FileText,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../../assets/images/logo/jindutt-logo.png";
 import testimonials from "../../data/testimonials";
+import { CATALOG_PDF } from "../../data/catalog";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -299,6 +301,18 @@ const Contact = () => {
                 <Clock3 className="w-4 h-4 text-[#d79b20]" />
                 <span>24/7 Support</span>
               </div>
+            </div>
+
+            <div className="mt-8 flex justify-center">
+              <a
+                href={CATALOG_PDF}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#d79b20] hover:bg-[#c08a1a] text-white font-semibold text-sm px-7 py-3 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-[#d79b20]/25"
+              >
+                <FileText className="w-4 h-4" />
+                <span>Explore Catalog</span>
+              </a>
             </div>
           </div>
         </div>
@@ -889,6 +903,30 @@ const Contact = () => {
                     </span>
                   </div>
                 </div>
+              </div>
+
+              {/* Dedicated Catalog CTA Card */}
+              <div className="mt-4 rounded-2xl border border-white/20 bg-blue-500/20 backdrop-blur-md p-6 shadow-2xl group hover:border-[#d79b20]/60 transition-all duration-300">
+                <span className="inline-block rounded-md border border-[#d79b20]/40 bg-[#d79b20]/20 px-2 py-1 text-[10px] font-bold uppercase tracking-widest text-[#d79b20]">
+                  OFFICIAL_DOCUMENTATION
+                </span>
+
+                <h3 className="mt-3 text-lg font-bold uppercase tracking-wide text-white">
+                  Explore Catalog
+                </h3>
+                <p className="text-blue-100 text-xs mt-1 leading-relaxed">
+                  View our complete product catalog
+                </p>
+
+                <a
+                  href={CATALOG_PDF}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 w-full inline-flex items-center justify-center gap-2 bg-[#d79b20] hover:bg-[#c08a1a] text-white text-xs font-bold uppercase tracking-wider py-3 px-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-[#d79b20]/25"
+                >
+                  <FileText className="w-4 h-4" />
+                  <span>Open Official Catalog (PDF)</span>
+                </a>
               </div>
             </div>
           </motion.div>

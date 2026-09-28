@@ -9,6 +9,7 @@ import products, { productMenuSections } from "../../data/products";
 import materials from "../../data/materials";
 import dimensions from "../../data/dimensions";
 import certificates from "../../data/certificates";
+import { CATALOG_PDF } from "../../data/catalog";
 
 export default function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -450,6 +451,14 @@ export default function Navbar() {
           <NavLink to="/gallery" className={linkStyle}>
             Gallery
           </NavLink>
+          <a
+            href={CATALOG_PDF}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 rounded-lg font-medium text-sm text-slate-600 hover:bg-slate-50 hover:text-[#0a1a52] transition-all duration-300"
+          >
+            Catalog
+          </a>
           <NavLink to="/contact" className={linkStyle}>
             Contact
           </NavLink>
@@ -531,6 +540,16 @@ export default function Navbar() {
             >
               Gallery
             </NavLink>
+
+            <a
+              href={CATALOG_PDF}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-3 rounded-xl font-medium text-sm text-slate-600 hover:bg-slate-50 hover:text-[#0a1a52] transition-all duration-300"
+              onClick={() => setMobileMenu(false)}
+            >
+              Catalog
+            </a>
 
             <NavLink
               to="/contact"

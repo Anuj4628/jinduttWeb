@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import certificates from "../../data/certificates";
 import bannerIndustrial from "../../assets/images/productImage/banner-industrial.webp";
+import { CATALOG_PDF } from "../../data/catalog";
 
 const Certificates = () => {
   return (
@@ -154,6 +155,14 @@ const Certificates = () => {
             <span className="text-sm text-gray-600">
               Need assistance with our certifications?
             </span>
+            <a
+              href={CATALOG_PDF}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 border border-[#d79b20] hover:bg-[#d79b20] text-[#0a1a52] hover:text-white text-sm font-semibold px-5 py-2 rounded-full transition-all duration-300"
+            >
+              Explore Catalog
+            </a>
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 bg-[#0a1a52] hover:bg-[#122a6e] text-white text-sm font-semibold px-6 py-2 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-[#0a1a52]/25"

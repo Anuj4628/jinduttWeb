@@ -16,6 +16,7 @@ import flanges from "../../assets/images/productImage/Flanges.webp";
 import rod from "../../assets/images/productImage/rod.webp";
 import fastener from "../../assets/images/productImage/fastener.webp";
 import valves from "../../assets/images/productImage/valves.webp";
+import { CATALOG_PDF } from "../../data/catalog";
 
 const cardData = [
   {
@@ -202,7 +203,7 @@ const Cards = () => {
       </div>
 
       {/* Bottom CTA */}
-      <div className="text-center mt-12">
+      <div className="text-center mt-12 flex flex-wrap justify-center items-center gap-4">
         <Link
           to="/products"
           className="inline-flex items-center gap-2 bg-[#0a1a52] hover:bg-[#1a3a7a] text-white font-semibold px-8 py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#0a1a52]/25"
@@ -210,6 +211,15 @@ const Cards = () => {
           View All Products
           <FaArrowRight className="w-4 h-4" />
         </Link>
+        <a
+          href={CATALOG_PDF}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 border-2 border-[#d79b20] hover:bg-[#d79b20] text-[#0a1a52] hover:text-white font-semibold px-8 py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-1"
+        >
+          Explore Catalog
+          <FaArrowRight className="w-4 h-4" />
+        </a>
       </div>
     </section>
   );

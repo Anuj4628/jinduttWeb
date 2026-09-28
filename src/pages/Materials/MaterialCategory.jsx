@@ -3,6 +3,7 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import materials from "../../data/materials";
 import bannerIndustrial from "../../assets/images/productImage/banner-industrial.webp";
+import { CATALOG_PDF } from "../../data/catalog";
 
 const MaterialCategory = () => {
   const { slug } = useParams();
@@ -230,10 +231,18 @@ const MaterialCategory = () => {
         {/* Bottom CTA */}
         {material.items && material.items.length > 6 && (
           <div className="mt-12 text-center">
-            <div className="inline-flex items-center gap-4 bg-white rounded-full px-6 py-3 shadow-md border border-gray-100">
+            <div className="inline-flex flex-wrap items-center justify-center gap-4 bg-white rounded-full px-6 py-3 shadow-md border border-gray-100">
               <span className="text-sm text-gray-600">
                 Need help finding the right product?
               </span>
+              <a
+                href={CATALOG_PDF}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-[#d79b20] hover:bg-[#d79b20] text-[#0a1a52] hover:text-white text-sm font-semibold px-5 py-2 rounded-full transition duration-200"
+              >
+                Explore Catalog
+              </a>
               <Link
                 to="/contact"
                 className="bg-[#0a1a52] hover:bg-[#122a6e] text-white text-sm font-semibold px-6 py-2 rounded-full transition duration-200"

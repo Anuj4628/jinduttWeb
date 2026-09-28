@@ -12,6 +12,7 @@ import {
   Home,
 } from "lucide-react";
 import dimensions from "../../data/dimensions";
+import { CATALOG_PDF } from "../../data/catalog";
 
 const DimensionViewer = () => {
   const { slug } = useParams();
@@ -81,6 +82,17 @@ const DimensionViewer = () => {
 
             {/* Right Section - Actions */}
             <div className="flex items-center gap-1.5 flex-wrap">
+              <a
+                href={CATALOG_PDF}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-lg border border-[#d79b20] bg-white hover:bg-[#d79b20] hover:text-white px-2.5 py-1.5 text-xs font-medium text-[#0a1a52] transition-all duration-200 shadow-sm"
+                title="View Full Catalog"
+              >
+                <FileText className="w-3.5 h-3.5" />
+                <span className="hidden sm:inline">Catalog</span>
+              </a>
+
               <a
                 href={dimension.pdf}
                 target="_blank"

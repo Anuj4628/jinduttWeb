@@ -21,6 +21,7 @@ import heroBg from "../../assets/images/industries/hero2.png";
 import workshop from "../../assets/images/industries/workshop.webp";
 import aboutCardData from "../../data/aboutCard";
 import industriesData from "../../data/industriesData";
+import { CATALOG_PDF } from "../../data/catalog";
 
 const About = () => {
   return (
@@ -79,6 +80,15 @@ const About = () => {
               >
                 Explore Products
               </Link>
+
+              <a
+                href={CATALOG_PDF}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-white/30 hover:border-white hover:bg-white/10 text-white font-semibold px-8 py-3.5 rounded-xl transition-all duration-300"
+              >
+                Explore Catalog
+              </a>
 
               <Link
                 to="/contact"
@@ -278,6 +288,29 @@ const About = () => {
                 Learn More About Us
                 <FaArrowRight className="w-3.5 h-3.5 md:w-4 md:h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
+
+              {/* Subtle Catalog CTA */}
+              <div className="mt-8 pt-6 border-t border-slate-200">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-slate-50 border border-slate-200/80 rounded-2xl p-5">
+                  <div>
+                    <h4 className="text-[#0a1a52] font-bold text-base">
+                      Explore Our Catalog
+                    </h4>
+                    <p className="text-slate-500 text-xs sm:text-sm mt-0.5">
+                      View our complete product range and company offerings.
+                    </p>
+                  </div>
+                  <a
+                    href={CATALOG_PDF}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 bg-[#0a1a52] hover:bg-[#d79b20] text-white text-xs sm:text-sm font-semibold px-5 py-2.5 rounded-xl transition-all duration-300 shadow-sm flex-shrink-0"
+                  >
+                    View Catalog
+                    <FaArrowRight className="w-3 h-3" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -429,7 +462,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 flex-shrink-0">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 flex-shrink-0">
               <Link
                 to="/contact"
                 className="group bg-[#0a1a52] hover:bg-[#122a6e] text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#0a1a52]/25 flex items-center justify-center gap-2"
@@ -437,6 +470,16 @@ const About = () => {
                 Get A Quote
                 <FaArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
+
+              <a
+                href={CATALOG_PDF}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-[#d79b20] bg-[#d79b20]/10 hover:bg-[#d79b20] hover:text-white text-[#0a1a52] font-semibold px-8 py-4 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                Explore Catalog
+                <FaArrowRight className="w-4 h-4" />
+              </a>
 
               <Link
                 to="/products"

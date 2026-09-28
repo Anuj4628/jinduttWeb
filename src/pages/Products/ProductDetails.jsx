@@ -5,6 +5,7 @@ import { getProductComponent } from "../../components/productDetails";
 import productMaterials from "../../data/productMaterials";
 import bannerIndustrial from "../../assets/images/productImage/banner-industrial.webp";
 import contact from "../../data/contact"; // ← Add this import
+import { CATALOG_PDF } from "../../data/catalog";
 
 export default function ProductDetails() {
   const { category, slug } = useParams();
@@ -152,26 +153,36 @@ export default function ProductDetails() {
                     Back to {category?.replace(/-/g, " ")}
                   </Link>
 
-                  <a
-                    href={`mailto:${contact?.email || "info@rpmexport.in"}`}
-                    className="ml-auto inline-flex items-center gap-2 bg-[#0a1a52] hover:bg-[#122a6e] text-white text-sm font-medium px-5 py-2.5 rounded-lg transition duration-200 shadow-sm hover:shadow-md"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2}
+                  <div className="ml-auto flex items-center gap-3">
+                    <a
+                      href={CATALOG_PDF}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 border border-[#d79b20] text-[#0a1a52] hover:bg-[#d79b20] hover:text-white text-sm font-medium px-4 py-2.5 rounded-lg transition duration-200 shadow-sm"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                      />
-                    </svg>
-                    Get Quote
-                  </a>
+                      View Catalog
+                    </a>
+                    <a
+                      href={`mailto:${contact?.email || "info@rpmexport.in"}`}
+                      className="inline-flex items-center gap-2 bg-[#0a1a52] hover:bg-[#122a6e] text-white text-sm font-medium px-5 py-2.5 rounded-lg transition duration-200 shadow-sm hover:shadow-md"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-4 w-4"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                        />
+                      </svg>
+                      Get Quote
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
