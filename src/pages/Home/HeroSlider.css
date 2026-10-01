@@ -1,0 +1,696 @@
+/* ===================================================
+   HERO SLIDER - REFINED ARCHITECTURAL GLASS UI
+   Clean, Bright, Industrial Steel Presentation
+   =================================================== */
+
+.hero-slider-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 680px;
+  max-height: 980px;
+  background-color: #0b1120;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* Slide item viewport */
+.hero-slider-viewport {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-slide-pane {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 800ms cubic-bezier(0.16, 1, 0.3, 1), visibility 800ms;
+  will-change: transform, opacity;
+  z-index: 1;
+}
+
+.hero-slide-pane.is-active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+/* Background Image Layer - Crisp, natural lighting, subtle parallax scale */
+.hero-bg-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.04);
+  transition: transform 7000ms cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+  filter: brightness(0.98) contrast(1.03);
+}
+
+.hero-slide-pane.is-active .hero-bg-img {
+  transform: scale(1.0);
+}
+
+/* Very subtle top atmospheric blend to ensure navbar legibility — NO dark blue blanket overlay */
+.hero-ambient-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 140px;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 20, 45, 0.42) 0%,
+    rgba(10, 20, 45, 0.12) 60%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Soft bottom vignette for telemetry bar contrast */
+.hero-ambient-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 160px;
+  background: linear-gradient(
+    0deg,
+    rgba(8, 14, 28, 0.65) 0%,
+    rgba(8, 14, 28, 0.2) 60%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Content Wrap */
+.hero-content-layer {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 100px 32px 110px;
+}
+
+.hero-content-container {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* ===================================================
+   GLASS / FROSTED CONTENT PANEL
+   Directly matching reference UI:
+   Semi-transparent, crisp subtle border, soft backdrop blur,
+   top accent highlight, clean padding & hierarchy
+   =================================================== */
+
+.hero-glass-panel {
+  width: 100%;
+  max-width: 660px;
+  background: rgba(10, 22, 50, 0.48);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-top: 1px solid rgba(255, 255, 255, 0.42);
+  border-left: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 
+    0 24px 60px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  padding: 38px 44px 36px;
+  position: relative;
+  overflow: hidden;
+  transform: translateY(16px);
+  opacity: 0;
+  transition: transform 600ms cubic-bezier(0.16, 1, 0.3, 1), opacity 600ms ease;
+}
+
+.hero-slide-pane.is-active .hero-glass-panel {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Top accent bar on frame */
+.hero-glass-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 64px;
+  height: 3.5px;
+  background: #d79b20;
+  box-shadow: 0 0 12px rgba(215, 155, 32, 0.85);
+}
+
+/* Eyebrow Label */
+.hero-panel-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.hero-eyebrow-line {
+  display: block;
+  width: 28px;
+  height: 2.5px;
+  background-color: #d79b20;
+  box-shadow: 0 0 8px rgba(215, 155, 32, 0.6);
+  border-radius: 2px;
+}
+
+.hero-eyebrow-text {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Headline Display */
+.hero-panel-headline {
+  font-size: clamp(2.1rem, 3.6vw, 3.25rem);
+  font-weight: 800;
+  line-height: 1.14;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+.hero-headline-accent {
+  color: #e5a932;
+  text-shadow: 0 2px 14px rgba(229, 169, 50, 0.4);
+}
+
+/* Description */
+.hero-panel-desc {
+  font-size: clamp(0.92rem, 1.05vw, 1.05rem);
+  line-height: 1.62;
+  letter-spacing: 0.005em;
+  color: rgba(241, 245, 249, 0.92);
+  margin-top: 14px;
+  max-width: 560px;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* CTA Group */
+.hero-panel-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+/* Primary Button */
+.hero-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #d79b20;
+  color: #FFFFFF;
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 11px 22px;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+  box-shadow: 0 8px 22px rgba(215, 155, 32, 0.32);
+}
+
+.hero-btn-primary:hover {
+  background-color: #be8616;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(215, 155, 32, 0.45);
+}
+
+/* Glass Outline Button */
+.hero-btn-glass {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 11px 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.25s ease;
+}
+
+.hero-btn-glass:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* Subtler Quote Link Button */
+.hero-btn-quote {
+  display: inline-flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 11px 18px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  transition: all 0.25s ease;
+}
+
+.hero-btn-quote:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #FFFFFF;
+}
+
+/* Credibility Tag inside Panel */
+.hero-panel-spec-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 22px;
+  padding: 5px 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 4px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.hero-spec-pip {
+  width: 6px;
+  height: 6px;
+  background-color: #e5a932;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(229, 169, 50, 0.8);
+}
+
+.hero-spec-text {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  color: rgba(241, 245, 249, 0.85);
+  text-transform: uppercase;
+}
+
+/* ===================================================
+   HERO TELEMETRY PROGRESS & CONTROLS DOCK (BOTTOM BAR)
+   =================================================== */
+
+.hero-bottom-dock {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  padding: 0 36px 36px;
+  pointer-events: none;
+}
+
+.hero-bottom-inner {
+  max-width: 1360px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  pointer-events: auto;
+}
+
+/* Telemetry Dock Container */
+.hero-telemetry-capsule {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  background: rgba(10, 20, 42, 0.65);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-left: 3px solid #d79b20;
+  padding: 8px 18px 8px 14px;
+  border-radius: 6px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-telemetry-capsule:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.45);
+}
+
+/* Industrial Counter Badge */
+.telemetry-counter-block {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-right: 14px;
+  border-right: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.telemetry-pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #d79b20;
+  box-shadow: 0 0 10px rgba(215, 155, 32, 0.9);
+  animation: heroPipPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes heroPipPulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.25);
+    box-shadow: 0 0 14px rgba(215, 155, 32, 1);
+  }
+}
+
+.telemetry-phase-tag {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.55);
+  text-transform: uppercase;
+}
+
+.telemetry-number-display {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 3px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  user-select: none;
+}
+
+.telemetry-curr-num {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+.telemetry-divider {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.35);
+  margin: 0 1px;
+}
+
+.telemetry-total-num {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.55);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Precision Segmented Interactive Progress Indicators */
+.telemetry-bars-track {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.telemetry-bar-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  padding: 4px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.2s ease;
+}
+
+.telemetry-bar-housing {
+  position: relative;
+  width: 48px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 2px;
+  overflow: hidden;
+  transition: height 0.2s ease, background-color 0.25s ease;
+}
+
+.telemetry-bar-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #b27e16, #e5a932);
+  border-radius: 2px;
+  transition: width 0.06s linear;
+}
+
+.telemetry-bar-laser {
+  position: absolute;
+  right: 0;
+  top: -2px;
+  width: 4px;
+  height: 8px;
+  background: #FFFFFF;
+  border-radius: 1px;
+  box-shadow: 0 0 8px #FFFFFF, 0 0 14px #e5a932;
+}
+
+.telemetry-bar-label {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.05em;
+  transition: color 0.2s ease;
+}
+
+.telemetry-bar-btn:hover .telemetry-bar-housing {
+  background: rgba(255, 255, 255, 0.32);
+  height: 5px;
+}
+
+.telemetry-bar-btn:hover .telemetry-bar-label {
+  color: #FFFFFF;
+}
+
+.telemetry-bar-btn.is-active .telemetry-bar-label {
+  color: #e5a932;
+  font-weight: 700;
+}
+
+.telemetry-bar-btn.is-passed .telemetry-bar-fill {
+  background: rgba(215, 155, 32, 0.65);
+}
+
+/* Arrow Navigation Buttons (Bottom Right) */
+.hero-arrows-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 80px; /* Safe clearance from floating WhatsApp & Call buttons */
+}
+
+.hero-arrow-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 6px;
+  background: rgba(10, 20, 42, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-arrow-button:hover {
+  background-color: #d79b20;
+  border-color: #d79b20;
+  color: #0b1120;
+  box-shadow: 0 8px 24px rgba(215, 155, 32, 0.45);
+  transform: translateY(-2px);
+}
+
+.hero-arrow-button:active {
+  transform: translateY(0);
+}
+
+/* ===================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   =================================================== */
+
+@media (max-width: 1024px) {
+  .hero-content-layer {
+    padding: 90px 24px 105px;
+  }
+
+  .hero-glass-panel {
+    max-width: 580px;
+    padding: 32px 36px;
+  }
+
+  .hero-panel-headline {
+    font-size: clamp(1.85rem, 3.8vw, 2.6rem);
+  }
+
+  .hero-bottom-dock {
+    padding: 0 24px 24px;
+  }
+
+  .telemetry-bars-track {
+    display: none;
+  }
+
+  .telemetry-counter-block {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .hero-arrows-wrap {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-slider-section {
+    height: 90vh;
+    min-height: 590px;
+  }
+
+  .hero-content-layer {
+    padding: 85px 18px 90px;
+  }
+
+  .hero-glass-panel {
+    max-width: 100%;
+    padding: 24px 20px;
+    background: rgba(10, 22, 50, 0.68);
+    border-radius: 8px;
+  }
+
+  .hero-panel-headline {
+    font-size: clamp(1.5rem, 5.2vw, 2.1rem);
+    line-height: 1.18;
+  }
+
+  .hero-panel-desc {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    margin-top: 10px;
+  }
+
+  .hero-panel-cta-group {
+    margin-top: 18px;
+    gap: 10px;
+  }
+
+  .hero-btn-primary,
+  .hero-btn-glass,
+  .hero-btn-quote {
+    padding: 9px 16px;
+    font-size: 0.86rem;
+  }
+
+  .hero-panel-spec-tag {
+    margin-top: 16px;
+    padding: 4px 10px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .hero-bottom-dock {
+    padding: 0 16px 16px;
+  }
+
+  .hero-arrow-button {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-slider-section {
+    height: 86vh;
+    min-height: 540px;
+  }
+
+  .hero-content-layer {
+    padding: 75px 12px 75px;
+  }
+
+  .hero-glass-panel {
+    padding: 18px 16px;
+  }
+
+  .hero-panel-headline {
+    font-size: clamp(1.25rem, 6.2vw, 1.65rem);
+    line-height: 1.2;
+  }
+
+  .hero-panel-cta-group {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .hero-btn-primary,
+  .hero-btn-glass,
+  .hero-btn-quote {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-panel-spec-tag {
+    display: none;
+  }
+
+  .telemetry-phase-tag {
+    display: none;
+  }
+
+  .telemetry-curr-num {
+    font-size: 1.1rem;
+  }
+
+  .hero-arrow-button {
+    width: 34px;
+    height: 34px;
+  }
+}
