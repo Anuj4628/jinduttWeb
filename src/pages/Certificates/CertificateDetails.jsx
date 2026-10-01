@@ -17,6 +17,7 @@ import certificates from "../../data/certificates";
 const CertificateDetails = () => {
   const { slug } = useParams();
   const [isLoading, setIsLoading] = useState(true);
+  const [viewMode, setViewMode] = useState("document");
 
   const certificate = certificates.find((c) => c.slug === slug);
 
@@ -78,7 +79,7 @@ const CertificateDetails = () => {
 
           {/* Title */}
           <div className="mt-6 max-w-4xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#0a1a52] leading-tight uppercase">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-[#0a1a52] leading-tight uppercase">
               {certificate.name}
             </h1>
 
@@ -102,6 +103,12 @@ const CertificateDetails = () => {
                 <CheckCircle className="w-4 h-4 text-[#d79b20]" />
                 <span>Official Copy</span>
               </div>
+              {certificate.certNo && (
+                <div className="flex items-center gap-2 text-sm font-semibold text-[#0a1a52] bg-white px-3 py-1 rounded-lg border border-slate-200">
+                  <span className="text-slate-400 font-normal">Cert No:</span>
+                  <span>{certificate.certNo}</span>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -124,13 +131,37 @@ const CertificateDetails = () => {
               </p>
             </div>
 
-            {/* Buttons */}
-            <div className="flex flex-wrap gap-3">
+            {/* Controls and Buttons */}
+            <div className="flex flex-wrap items-center gap-3">
+              {/* View Mode Switcher */}
+              <div className="inline-flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200">
+                <button
+                  onClick={() => setViewMode("document")}
+                  className={`px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all ${
+                    viewMode === "document"
+                      ? "bg-[#0a1a52] text-white shadow-sm"
+                      : "text-slate-600 hover:text-[#0a1a52]"
+                  }`}
+                >
+                  Document View
+                </button>
+                <button
+                  onClick={() => setViewMode("pdf")}
+                  className={`px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all ${
+                    viewMode === "pdf"
+                      ? "bg-[#0a1a52] text-white shadow-sm"
+                      : "text-slate-600 hover:text-[#0a1a52]"
+                  }`}
+                >
+                  Interactive PDF
+                </button>
+              </div>
+
               <a
                 href={certificate.pdf}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:border-slate-400 transition-all duration-200 shadow-sm"
+                className="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:border-slate-400 transition-all duration-200 shadow-sm"
               >
                 <ExternalLink className="w-4 h-4" />
                 Open in New Tab
@@ -139,7 +170,7 @@ const CertificateDetails = () => {
               <a
                 href={certificate.pdf}
                 download={`${certificate.name}.pdf`}
-                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#0a1a52] to-[#1a3a7a] px-6 py-3 text-sm font-semibold text-white hover:shadow-lg hover:shadow-[#0a1a52]/25 transition-all duration-200 hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#0a1a52] to-[#1a3a7a] px-5 py-2.5 text-sm font-semibold text-white hover:shadow-lg hover:shadow-[#0a1a52]/25 transition-all duration-200 hover:-translate-y-0.5"
               >
                 <Download className="w-4 h-4" />
                 Download PDF
@@ -147,7 +178,7 @@ const CertificateDetails = () => {
 
               <button
                 onClick={() => window.print()}
-                className="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-all duration-200 shadow-sm lg:hidden"
+                className="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-all duration-200 shadow-sm hidden sm:inline-flex"
               >
                 <Printer className="w-4 h-4" />
                 Print
@@ -155,27 +186,39 @@ const CertificateDetails = () => {
             </div>
           </div>
 
-          {/* PDF VIEWER */}
-          <div className="bg-slate-100 relative">
-            {/* PDF Loading Indicator */}
-            {isLoading && (
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div className="text-center">
-                  <div className="w-12 h-12 border-4 border-[#d79b20]/20 border-t-[#d79b20] rounded-full animate-spin mx-auto mb-4"></div>
-                  <p className="text-slate-400 text-sm">
-                    Loading certificate...
-                  </p>
-                </div>
+          {/* VIEWER AREA */}
+          <div className="bg-slate-100 relative min-h-[500px]">
+            {viewMode === "document" && certificate.image ? (
+              <div className="w-full flex justify-center bg-slate-900/5 p-4 sm:p-8">
+                <img
+                  src={certificate.image}
+                  alt={certificate.name}
+                  className="max-h-[900px] w-auto max-w-full rounded-xl shadow-xl border border-slate-200/80 object-contain bg-white"
+                />
               </div>
-            )}
+            ) : (
+              <>
+                {/* PDF Loading Indicator */}
+                {isLoading && (
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div className="text-center">
+                      <div className="w-12 h-12 border-4 border-[#d79b20]/20 border-t-[#d79b20] rounded-full animate-spin mx-auto mb-4"></div>
+                      <p className="text-slate-400 text-sm">
+                        Loading certificate PDF...
+                      </p>
+                    </div>
+                  </div>
+                )}
 
-            <iframe
-              src={`${certificate.pdf}#toolbar=1`}
-              className="w-full h-[650px] md:h-[900px] relative z-10"
-              title={certificate.name}
-              loading="lazy"
-              onLoad={() => setIsLoading(false)}
-            />
+                <iframe
+                  src={`${certificate.pdf}#toolbar=1`}
+                  className="w-full h-[650px] md:h-[900px] relative z-10"
+                  title={certificate.name}
+                  loading="lazy"
+                  onLoad={() => setIsLoading(false)}
+                />
+              </>
+            )}
           </div>
 
           {/* FOOTER */}

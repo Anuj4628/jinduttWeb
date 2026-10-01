@@ -52,31 +52,48 @@ const Certificates = () => {
 
       {/* Certificate Cards */}
       <div className="max-w-7xl mx-auto px-5 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8">
           {certificates && certificates.length > 0 ? (
             certificates.map((certificate) => (
               <div
                 key={certificate.id}
                 className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-[#d79b20]/40 hover:-translate-y-2 flex flex-col"
               >
-                {/* PDF Preview */}
-                <div className="relative h-64 bg-gray-100 overflow-hidden">
-                  <iframe
-                    src={`${certificate.pdf}#toolbar=0`}
-                    title={certificate.name}
-                    className="w-full h-full pointer-events-none"
-                    loading="lazy"
-                  />
+                {/* Certificate Preview Thumbnail */}
+                <Link
+                  to={certificate.route || `/certificates/${certificate.slug}`}
+                  className="relative h-72 bg-slate-100 overflow-hidden block group/preview"
+                  title={`View ${certificate.name}`}
+                >
+                  {certificate.image ? (
+                    <img
+                      src={certificate.image}
+                      alt={certificate.name}
+                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover/preview:scale-105"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <iframe
+                      src={`${certificate.pdf}#toolbar=0`}
+                      title={certificate.name}
+                      className="w-full h-full pointer-events-none"
+                      loading="lazy"
+                    />
+                  )}
 
-                  {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a1a52]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  {/* Hover Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a1a52]/75 via-transparent to-transparent opacity-0 group-hover/preview:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                    <span className="text-white text-xs font-semibold px-3 py-1.5 rounded-full bg-black/40 backdrop-blur-sm border border-white/20">
+                      View Certificate →
+                    </span>
+                  </div>
 
                   {/* Badge */}
-                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3.5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider text-[#0a1a52] shadow-sm border border-white/50 flex items-center gap-1.5">
+                  <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-3.5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider text-[#0a1a52] shadow-sm border border-white/50 flex items-center gap-1.5">
                     <ShieldCheck className="w-3 h-3 text-[#d79b20]" />
                     Verified
                   </div>
-                </div>
+                </Link>
 
                 {/* Content */}
                 <div className="p-6 flex-1 flex flex-col">
@@ -87,11 +104,11 @@ const Certificates = () => {
                     </span>
                   </div>
 
-                  <h2 className="text-xl font-bold text-[#0a1a52] group-hover:text-[#d79b20] transition-colors line-clamp-2">
+                  <h2 className="text-lg font-bold text-[#0a1a52] group-hover:text-[#d79b20] transition-colors line-clamp-2">
                     {certificate.name}
                   </h2>
 
-                  <p className="mt-3 text-sm text-slate-500 leading-relaxed flex-1 line-clamp-3">
+                  <p className="mt-2.5 text-sm text-slate-500 leading-relaxed flex-1 line-clamp-3">
                     {certificate.description}
                   </p>
 
@@ -104,17 +121,17 @@ const Certificates = () => {
                     <div className="w-px h-4 bg-slate-200"></div>
                     <div className="flex items-center gap-1.5">
                       <FileCheck className="w-3 h-3 text-[#d79b20]" />
-                      <span>PDF Available</span>
+                      <span>Document</span>
                     </div>
                   </div>
 
                   {/* Buttons */}
-                  <div className="mt-5 pt-5 border-t border-gray-100 group-hover:border-[#d79b20]/20 transition-colors flex items-center gap-3">
+                  <div className="mt-5 pt-5 border-t border-gray-100 group-hover:border-[#d79b20]/20 transition-colors flex items-center gap-2.5">
                     <Link
                       to={
                         certificate.route || `/certificates/${certificate.slug}`
                       }
-                      className="flex-1 inline-flex items-center justify-center gap-2 bg-[#0a1a52] hover:bg-[#122a6e] text-white text-sm font-semibold py-2.5 px-4 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-[#0a1a52]/20 group-hover:shadow-[#0a1a52]/20"
+                      className="flex-1 inline-flex items-center justify-center gap-2 bg-[#0a1a52] hover:bg-[#122a6e] text-white text-xs sm:text-sm font-semibold py-2.5 px-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-[#0a1a52]/20 group-hover:shadow-[#0a1a52]/20"
                     >
                       View Details
                       <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -124,8 +141,8 @@ const Certificates = () => {
                       href={certificate.pdf}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex h-11 w-11 items-center justify-center rounded-lg border border-gray-200 text-slate-500 transition-all duration-300 hover:border-[#d79b20] hover:text-[#d79b20] hover:bg-[#d79b20]/5"
-                      title="Open PDF"
+                      className="flex h-10 w-10 items-center justify-center rounded-lg border border-gray-200 text-slate-500 transition-all duration-300 hover:border-[#d79b20] hover:text-[#d79b20] hover:bg-[#d79b20]/5 flex-shrink-0"
+                      title="Open in New Tab"
                     >
                       <ExternalLink className="w-4 h-4" />
                     </a>
@@ -133,7 +150,7 @@ const Certificates = () => {
                     <a
                       href={certificate.pdf}
                       download={`${certificate.name}.pdf`}
-                      className="flex h-11 w-11 items-center justify-center rounded-lg border border-gray-200 text-slate-500 transition-all duration-300 hover:border-[#d79b20] hover:text-[#d79b20] hover:bg-[#d79b20]/5"
+                      className="flex h-10 w-10 items-center justify-center rounded-lg border border-gray-200 text-slate-500 transition-all duration-300 hover:border-[#d79b20] hover:text-[#d79b20] hover:bg-[#d79b20]/5 flex-shrink-0"
                       title="Download PDF"
                     >
                       <Download className="w-4 h-4" />
@@ -143,7 +160,7 @@ const Certificates = () => {
               </div>
             ))
           ) : (
-            <div className="col-span-3 text-center py-12">
+            <div className="col-span-4 text-center py-12">
               <p className="text-slate-500">No certificates available.</p>
             </div>
           )}

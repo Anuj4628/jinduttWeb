@@ -17,11 +17,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company Info */}
           <div>
-            <img
-              src={logo}
-              alt="Jindutt Metal & Alloy"
-              className="h-16 w-auto object-contain mb-4"
-            />
+            <div className="inline-block bg-white p-3 rounded-xl shadow-sm mb-4">
+              <img
+                src={logo}
+                alt="Jindutt Metal & Alloy"
+                className="h-14 sm:h-16 w-auto object-contain"
+              />
+            </div>
             <p className="text-slate-300 text-base md:text-lg leading-relaxed">
               Jindutt Metal & Alloy Pvt. Ltd. is a trusted manufacturer,
               stockist, supplier and exporter of premium metal products.
