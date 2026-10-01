@@ -6,9 +6,9 @@
 .hero-slider-section {
   position: relative;
   width: 100%;
-  height: 100vh;
-  min-height: 680px;
-  max-height: 980px;
+  height: calc(100vh - 80px);
+  height: calc(100dvh - 80px);
+  min-height: 520px;
   background-color: #0b1120;
   overflow: hidden;
   user-select: none;
@@ -107,7 +107,7 @@
   height: 100%;
   display: flex;
   align-items: center;
-  padding: 100px 32px 110px;
+  padding: 30px 32px 64px;
 }
 
 .hero-content-container {
@@ -128,8 +128,8 @@
 
 .hero-glass-panel {
   width: 100%;
-  max-width: 660px;
-  background: rgba(10, 22, 50, 0.48);
+  max-width: 640px;
+  background: rgba(10, 22, 50, 0.52);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border: 1px solid rgba(255, 255, 255, 0.22);
@@ -139,7 +139,7 @@
     0 24px 60px rgba(0, 0, 0, 0.35),
     inset 0 1px 0 rgba(255, 255, 255, 0.25);
   border-radius: 12px;
-  padding: 38px 44px 36px;
+  padding: 30px 38px 28px;
   position: relative;
   overflow: hidden;
   transform: translateY(16px);
@@ -554,21 +554,53 @@
    =================================================== */
 
 @media (max-width: 1024px) {
+  .hero-slider-section {
+    height: 62vh;
+    height: 62dvh;
+    min-height: 460px;
+    max-height: 580px;
+  }
+
   .hero-content-layer {
-    padding: 90px 24px 105px;
+    padding: 20px 24px 44px;
   }
 
   .hero-glass-panel {
-    max-width: 580px;
-    padding: 32px 36px;
+    max-width: 520px;
+    padding: 20px 24px 18px;
   }
 
   .hero-panel-headline {
-    font-size: clamp(1.85rem, 3.8vw, 2.6rem);
+    font-size: clamp(1.45rem, 3.2vw, 2.05rem);
+    line-height: 1.16;
+  }
+
+  .hero-panel-desc {
+    font-size: 0.86rem;
+    line-height: 1.45;
+    margin-top: 8px;
+  }
+
+  .hero-panel-cta-group {
+    margin-top: 14px;
+    gap: 8px;
+  }
+
+  .hero-btn-primary,
+  .hero-btn-glass,
+  .hero-btn-quote {
+    padding: 7px 14px;
+    font-size: 0.8rem;
+  }
+
+  .hero-panel-spec-tag {
+    margin-top: 10px;
+    padding: 3px 8px;
+    font-size: 0.68rem;
   }
 
   .hero-bottom-dock {
-    padding: 0 24px 24px;
+    padding: 0 24px 16px;
   }
 
   .telemetry-bars-track {
@@ -583,114 +615,204 @@
   .hero-arrows-wrap {
     margin-right: 0;
   }
+
+  .hero-arrow-button {
+    width: 36px;
+    height: 36px;
+  }
 }
 
 @media (max-width: 768px) {
   .hero-slider-section {
-    height: 90vh;
-    min-height: 590px;
+    /* Compact banner height: 50-60% of viewport */
+    height: 55vh;
+    height: 55dvh;
+    min-height: 375px;
+    max-height: 460px;
+  }
+
+  .hero-bg-img {
+    object-position: center;
   }
 
   .hero-content-layer {
-    padding: 85px 18px 90px;
+    padding: 10px 16px 38px;
   }
 
   .hero-glass-panel {
     max-width: 100%;
-    padding: 24px 20px;
+    padding: 12px 14px 10px;
     background: rgba(10, 22, 50, 0.68);
     border-radius: 8px;
   }
 
+  .hero-panel-eyebrow {
+    margin-bottom: 4px;
+    gap: 6px;
+  }
+
+  .hero-eyebrow-line {
+    width: 16px;
+    height: 2px;
+  }
+
+  .hero-eyebrow-text {
+    font-size: 0.66rem;
+    letter-spacing: 0.14em;
+  }
+
   .hero-panel-headline {
-    font-size: clamp(1.5rem, 5.2vw, 2.1rem);
-    line-height: 1.18;
+    font-size: clamp(1.05rem, 4.2vw, 1.35rem);
+    line-height: 1.15;
   }
 
   .hero-panel-desc {
-    font-size: 0.88rem;
-    line-height: 1.55;
-    margin-top: 10px;
+    font-size: 0.76rem;
+    line-height: 1.34;
+    margin-top: 5px;
+    max-width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   .hero-panel-cta-group {
-    margin-top: 18px;
-    gap: 10px;
+    margin-top: 8px;
+    gap: 6px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
   }
 
   .hero-btn-primary,
   .hero-btn-glass,
   .hero-btn-quote {
-    padding: 9px 16px;
-    font-size: 0.86rem;
+    padding: 5px 10px;
+    font-size: 0.72rem;
+    border-radius: 5px;
   }
 
   .hero-panel-spec-tag {
-    margin-top: 16px;
-    padding: 4px 10px;
+    margin-top: 6px;
+    padding: 2px 7px;
+    font-size: 0.62rem;
+    letter-spacing: 0.03em;
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    display: inline-flex;
   }
 
   .hero-bottom-dock {
-    padding: 0 16px 16px;
+    padding: 0 16px 8px;
+  }
+
+  .hero-telemetry-capsule {
+    padding: 3px 8px;
+    gap: 6px;
+    border-radius: 4px;
+  }
+
+  .telemetry-phase-tag {
+    font-size: 0.58rem;
+    letter-spacing: 0.08em;
+  }
+
+  .telemetry-curr-num {
+    font-size: 0.92rem;
+  }
+
+  .telemetry-total-num {
+    font-size: 0.7rem;
+  }
+
+  .hero-arrows-wrap {
+    margin-right: 0;
+    gap: 6px;
   }
 
   .hero-arrow-button {
-    width: 38px;
-    height: 38px;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
   }
 }
 
 @media (max-width: 480px) {
   .hero-slider-section {
-    height: 86vh;
-    min-height: 540px;
+    /* Compact banner height: 50-55% of viewport */
+    height: 52vh;
+    height: 52dvh;
+    min-height: 345px;
+    max-height: 420px;
   }
 
   .hero-content-layer {
-    padding: 75px 12px 75px;
+    padding: 8px 12px 34px;
   }
 
   .hero-glass-panel {
-    padding: 18px 16px;
+    padding: 10px 12px 8px;
+  }
+
+  .hero-panel-eyebrow {
+    margin-bottom: 3px;
+    gap: 5px;
+  }
+
+  .hero-eyebrow-line {
+    width: 12px;
+    height: 1.5px;
+  }
+
+  .hero-eyebrow-text {
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
   }
 
   .hero-panel-headline {
-    font-size: clamp(1.25rem, 6.2vw, 1.65rem);
-    line-height: 1.2;
+    font-size: clamp(0.96rem, 4.1vw, 1.18rem);
+    line-height: 1.14;
+  }
+
+  .hero-panel-desc {
+    font-size: 0.72rem;
+    line-height: 1.28;
+    margin-top: 4px;
   }
 
   .hero-panel-cta-group {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-    gap: 8px;
+    margin-top: 6px;
+    gap: 5px;
   }
 
   .hero-btn-primary,
   .hero-btn-glass,
   .hero-btn-quote {
-    width: 100%;
-    justify-content: center;
+    padding: 4px 8px;
+    font-size: 0.68rem;
   }
 
   .hero-panel-spec-tag {
-    display: none;
+    margin-top: 5px;
+    padding: 2px 6px;
+    font-size: 0.58rem;
   }
 
-  .telemetry-phase-tag {
-    display: none;
+  .hero-bottom-dock {
+    padding: 0 12px 6px;
   }
 
-  .telemetry-curr-num {
-    font-size: 1.1rem;
+  .hero-telemetry-capsule {
+    padding: 2px 6px;
+    gap: 4px;
   }
 
   .hero-arrow-button {
-    width: 34px;
-    height: 34px;
+    width: 28px;
+    height: 28px;
   }
 }
+

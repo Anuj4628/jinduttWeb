@@ -24,6 +24,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import logo from "../../assets/images/logo/jindutt-logo.png";
 import testimonials from "../../data/testimonials";
 import { CATALOG_PDF } from "../../data/catalog";
+import "../../components/common/PageHero.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -249,70 +250,80 @@ const Contact = () => {
       </AnimatePresence>
 
       {/* =============================== */}
-      {/* HERO SECTION */}
+      {/* HERO SECTION - REFINED GLASS UI */}
       {/* =============================== */}
-      <section
-        className="relative w-full min-h-[70vh] flex items-center"
-        style={{
-          backgroundImage: `url(${heroBg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0a1a52]/90 via-[#0a1a52]/70 to-[#0a1a52]/80 backdrop-blur-[2px]"></div>
-        <div className="absolute inset-0 bg-[url('/src/assets/images/pattern-dots.svg')] opacity-10"></div>
+      <section className="page-hero-section" aria-label="Contact Jindutt Metal & Alloy">
+        {/* Natural Background Image Layer (No dark/blue tint) */}
+        <div className="page-hero-bg-layer">
+          <img
+            src={heroBg}
+            alt="Jindutt Metal & Alloy Global Logistics & Supply Node"
+            className="page-hero-bg-img"
+            loading="eager"
+          />
+        </div>
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 flex items-center justify-center min-h-[70vh]">
-          <div className="max-w-4xl text-center">
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <span className="w-12 h-0.5 bg-[#d79b20]"></span>
-              <span className="text-[#d79b20] text-sm font-semibold uppercase tracking-widest">
-                Secure Infrastructure Pipeline
-              </span>
-              <span className="w-12 h-0.5 bg-[#d79b20]"></span>
-            </div>
+        {/* Subtle atmospheric edge blends */}
+        <div className="page-hero-ambient-top" />
+        <div className="page-hero-ambient-bottom" />
 
-            <h1 className="flex flex-col gap-2 font-black tracking-tight text-white">
-              <span className="text-4xl md:text-5xl lg:text-6xl leading-none">
+        {/* Content Layer */}
+        <div className="page-hero-content-layer">
+          <div className="page-hero-content-container">
+            {/* Frosted Architectural Glass Panel */}
+            <div className="page-hero-glass-panel">
+              {/* Eyebrow Label */}
+              <div className="page-hero-eyebrow">
+                <span className="page-hero-eyebrow-line" />
+                <span className="page-hero-eyebrow-text">
+                  Secure Infrastructure Pipeline
+                </span>
+              </div>
+
+              {/* Headline */}
+              <h1 className="page-hero-headline">
                 INITIATE GLOBAL
-              </span>
-              <span className="text-[#d79b20] text-4xl md:text-5xl lg:text-6xl font-bold leading-none">
-                TECHNICAL CONSULTATION
-              </span>
-            </h1>
+                <br />
+                <span className="page-hero-headline-accent">TECHNICAL CONSULTATION</span>
+              </h1>
 
-            <p className="mt-6 max-w-2xl mx-auto text-slate-300 text-base md:text-lg leading-relaxed">
-              Connect directly with our corporate logistics nodes, international
-              sales divisions, and heavy-scale manufacturing yards.
-            </p>
+              {/* Description */}
+              <p className="page-hero-desc">
+                Connect directly with our corporate logistics nodes, international
+                sales divisions, and heavy-scale manufacturing yards.
+              </p>
 
-            <div className="flex flex-wrap items-center justify-center gap-6 mt-8">
-              <div className="flex items-center gap-2 text-sm text-slate-300">
-                <ShieldCheck className="w-4 h-4 text-[#d79b20]" />
-                <span>ISO Certified</span>
+              {/* Quality & Trust Badges */}
+              <div className="page-hero-badge-group">
+                <div className="page-hero-badge-item">
+                  <ShieldCheck className="w-4 h-4 text-[#d79b20]" />
+                  <span>ISO Certified</span>
+                </div>
+                <div className="page-hero-badge-divider" />
+                <div className="page-hero-badge-item">
+                  <CheckCircle className="w-4 h-4 text-[#d79b20]" />
+                  <span>Global Reach</span>
+                </div>
+                <div className="page-hero-badge-divider" />
+                <div className="page-hero-badge-item">
+                  <Clock3 className="w-4 h-4 text-[#d79b20]" />
+                  <span>24/7 Support</span>
+                </div>
               </div>
-              <div className="w-px h-6 bg-slate-600/50"></div>
-              <div className="flex items-center gap-2 text-sm text-slate-300">
-                <CheckCircle className="w-4 h-4 text-[#d79b20]" />
-                <span>Global Reach</span>
-              </div>
-              <div className="w-px h-6 bg-slate-600/50"></div>
-              <div className="flex items-center gap-2 text-sm text-slate-300">
-                <Clock3 className="w-4 h-4 text-[#d79b20]" />
-                <span>24/7 Support</span>
-              </div>
-            </div>
 
-            <div className="mt-8 flex justify-center">
-              <a
-                href={CATALOG_PDF}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#d79b20] hover:bg-[#c08a1a] text-white font-semibold text-sm px-7 py-3 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-[#d79b20]/25"
-              >
-                <FileText className="w-4 h-4" />
-                <span>Explore Catalog</span>
-              </a>
+              {/* CTA Button */}
+              <div className="page-hero-cta-group">
+                <a
+                  href={CATALOG_PDF}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="page-hero-btn-primary"
+                  id="contact-hero-explore-catalog-btn"
+                >
+                  <FileText className="w-4 h-4" />
+                  <span>Explore Catalog</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>

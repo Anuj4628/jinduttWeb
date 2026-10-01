@@ -22,125 +22,127 @@ import workshop from "../../assets/images/industries/workshop.webp";
 import aboutCardData from "../../data/aboutCard";
 import industriesData from "../../data/industriesData";
 import { CATALOG_PDF } from "../../data/catalog";
+import "../../components/common/PageHero.css";
 
 const About = () => {
   return (
     <>
       {/* =============================== */}
-      {/* HERO SECTION - FIXED IMAGE ALIGNMENT */}
+      {/* HERO SECTION - REFINED GLASS UI */}
       {/* =============================== */}
-      <section className="relative w-full min-h-[900px] lg:min-h-[950px] overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0">
+      <section className="page-hero-section" aria-label="About Jindutt Metal & Alloy">
+        {/* Natural Background Image Layer (No dark/blue tint) */}
+        <div className="page-hero-bg-layer">
           <img
             src={heroBg}
-            alt="Jindutt Metal & Alloy Hero Background"
-            className="w-full h-full object-cover object-center"
+            alt="Jindutt Metal & Alloy Manufacturing Yard"
+            className="page-hero-bg-img"
+            loading="eager"
           />
-
-          {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0a1a52]/90 via-[#0a1a52]/75 to-[#0a1a52]/50"></div>
-
-          {/* Pattern */}
-          <div className="absolute inset-0 bg-[url('/src/assets/images/pattern-dots.svg')] opacity-10"></div>
         </div>
 
-        {/* Hero Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-28 pb-40">
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-3 mb-4">
-              <span className="w-12 h-0.5 bg-[#d79b20]"></span>
+        {/* Subtle atmospheric edge blends */}
+        <div className="page-hero-ambient-top" />
+        <div className="page-hero-ambient-bottom" />
 
-              <span className="text-[#d79b20] text-sm font-semibold uppercase tracking-widest">
-                Global Metal Supplies & Exporter
-              </span>
-            </div>
+        {/* Content Layer */}
+        <div className="page-hero-content-layer">
+          <div className="page-hero-content-container">
+            {/* Frosted Architectural Glass Panel */}
+            <div className="page-hero-glass-panel">
+              {/* Eyebrow Label */}
+              <div className="page-hero-eyebrow">
+                <span className="page-hero-eyebrow-line" />
+                <span className="page-hero-eyebrow-text">
+                  Global Metal Supplies & Exporter
+                </span>
+              </div>
 
-            <h1 className="text-white font-black text-4xl md:text-6xl lg:text-7xl leading-[1.1]">
-              ENGINEERED FOR
-              <br />
-              <span className="text-[#d79b20]">PERFORMANCE.</span>
-              <br />
-              BUILT FOR GLOBAL
-              <br />
-              <span className="text-[#d79b20]">INDUSTRY.</span>
-            </h1>
+              {/* Headline */}
+              <h1 className="page-hero-headline">
+                ENGINEERED FOR <span className="page-hero-headline-accent">PERFORMANCE.</span>
+                <br />
+                BUILT FOR GLOBAL <span className="page-hero-headline-accent">INDUSTRY.</span>
+              </h1>
 
-            <p className="text-slate-200 mt-6 text-base md:text-lg leading-relaxed max-w-2xl">
-              Jindutt Metal & Alloy Pvt. Ltd. supplies Stainless Steel, Duplex
-              Steel, Super Duplex Steel, Nickel Alloys, Titanium, Inconel,
-              Monel, Hastelloy and industrial piping products to customers
-              worldwide.
-            </p>
+              {/* Description */}
+              <p className="page-hero-desc">
+                Jindutt Metal & Alloy Pvt. Ltd. supplies Stainless Steel, Duplex
+                Steel, Super Duplex Steel, Nickel Alloys, Titanium, Inconel,
+                Monel, Hastelloy and industrial piping products to customers
+                worldwide.
+              </p>
 
-            <div className="flex flex-wrap gap-4 mt-8">
-              <Link
-                to="/products"
-                className="bg-[#d79b20] hover:bg-[#c08a1a] text-white font-semibold px-8 py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#d79b20]/30"
-              >
-                Explore Products
-              </Link>
+              {/* CTA Buttons */}
+              <div className="page-hero-cta-group">
+                <Link
+                  to="/products"
+                  className="page-hero-btn-primary group"
+                  id="about-hero-explore-products-btn"
+                >
+                  Explore Products
+                  <FaArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                </Link>
 
-              <a
-                href={CATALOG_PDF}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border-2 border-white/30 hover:border-white hover:bg-white/10 text-white font-semibold px-8 py-3.5 rounded-xl transition-all duration-300"
-              >
-                Explore Catalog
-              </a>
+                <a
+                  href={CATALOG_PDF}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="page-hero-btn-glass"
+                  id="about-hero-explore-catalog-btn"
+                >
+                  Explore Catalog
+                </a>
 
-              <Link
-                to="/contact"
-                className="border-2 border-white/30 hover:border-white hover:bg-white/10 text-white font-semibold px-8 py-3.5 rounded-xl transition-all duration-300"
-              >
-                Get a Quote
-              </Link>
+                <Link
+                  to="/contact"
+                  className="page-hero-btn-quote"
+                  id="about-hero-get-quote-btn"
+                >
+                  Get a Quote
+                </Link>
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* Stats Cards */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 w-full max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
-            <div className="rounded-2xl bg-white/10 backdrop-blur-xl border border-white/10 p-6 transition duration-300 hover:bg-white/15">
-              <div className="w-12 h-12 rounded-xl bg-[#d79b20]/20 flex items-center justify-center mb-4">
-                <FaGlobe className="text-[#d79b20] text-xl" />
+      {/* =============================== */}
+      {/* STATS METRICS STRIP */}
+      {/* =============================== */}
+      <section className="w-full bg-[#0b1120] py-8 lg:py-10 border-t border-b border-white/10 relative z-10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
+            <div className="rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 p-5 md:p-6 transition duration-300 hover:bg-white/10 hover:border-[#d79b20]/40 group">
+              <div className="w-11 h-11 md:w-12 md:h-12 rounded-xl bg-[#d79b20]/20 flex items-center justify-center mb-3 group-hover:scale-105 transition-transform">
+                <FaGlobe className="text-[#d79b20] text-lg md:text-xl" />
               </div>
-
-              <h2 className="text-3xl font-bold text-white">50+</h2>
-
-              <p className="text-slate-300 text-sm mt-2">Countries Served</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight">50+</h2>
+              <p className="text-slate-300 text-xs md:text-sm mt-1">Countries Served</p>
             </div>
 
-            <div className="rounded-2xl bg-white/10 backdrop-blur-xl border border-white/10 p-6 transition duration-300 hover:bg-white/15">
-              <div className="w-12 h-12 rounded-xl bg-[#d79b20]/20 flex items-center justify-center mb-4">
-                <FaBoxes className="text-[#d79b20] text-xl" />
+            <div className="rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 p-5 md:p-6 transition duration-300 hover:bg-white/10 hover:border-[#d79b20]/40 group">
+              <div className="w-11 h-11 md:w-12 md:h-12 rounded-xl bg-[#d79b20]/20 flex items-center justify-center mb-3 group-hover:scale-105 transition-transform">
+                <FaBoxes className="text-[#d79b20] text-lg md:text-xl" />
               </div>
-
-              <h2 className="text-3xl font-bold text-white">5000+</h2>
-
-              <p className="text-slate-300 text-sm mt-2">Product Variants</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight">5000+</h2>
+              <p className="text-slate-300 text-xs md:text-sm mt-1">Product Variants</p>
             </div>
 
-            <div className="rounded-2xl bg-white/10 backdrop-blur-xl border border-white/10 p-6 transition duration-300 hover:bg-white/15">
-              <div className="w-12 h-12 rounded-xl bg-[#d79b20]/20 flex items-center justify-center mb-4">
-                <FaAward className="text-[#d79b20] text-xl" />
+            <div className="rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 p-5 md:p-6 transition duration-300 hover:bg-white/10 hover:border-[#d79b20]/40 group">
+              <div className="w-11 h-11 md:w-12 md:h-12 rounded-xl bg-[#d79b20]/20 flex items-center justify-center mb-3 group-hover:scale-105 transition-transform">
+                <FaAward className="text-[#d79b20] text-lg md:text-xl" />
               </div>
-
-              <h2 className="text-3xl font-bold text-white">ISO</h2>
-
-              <p className="text-slate-300 text-sm mt-2">Certified Quality</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight">ISO</h2>
+              <p className="text-slate-300 text-xs md:text-sm mt-1">Certified Quality</p>
             </div>
 
-            <div className="rounded-2xl bg-white/10 backdrop-blur-xl border border-white/10 p-6 transition duration-300 hover:bg-white/15">
-              <div className="w-12 h-12 rounded-xl bg-[#d79b20]/20 flex items-center justify-center mb-4">
-                <FaHeadset className="text-[#d79b20] text-xl" />
+            <div className="rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 p-5 md:p-6 transition duration-300 hover:bg-white/10 hover:border-[#d79b20]/40 group">
+              <div className="w-11 h-11 md:w-12 md:h-12 rounded-xl bg-[#d79b20]/20 flex items-center justify-center mb-3 group-hover:scale-105 transition-transform">
+                <FaHeadset className="text-[#d79b20] text-lg md:text-xl" />
               </div>
-
-              <h2 className="text-3xl font-bold text-white">24/7</h2>
-
-              <p className="text-slate-300 text-sm mt-2">Customer Support</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight">24/7</h2>
+              <p className="text-slate-300 text-xs md:text-sm mt-1">Customer Support</p>
             </div>
           </div>
         </div>
