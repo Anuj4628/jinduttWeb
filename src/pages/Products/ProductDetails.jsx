@@ -16,9 +16,24 @@ export default function ProductDetails() {
     return <ProductComponent />;
   }
 
+  const matchSlug = (item, s) =>
+    item.slug === s ||
+    (s === "a105" && item.slug === "a105-bar") ||
+    (s === "a105-bar" && item.slug === "a105");
+
   // Find product from materials data
   const materials = productMaterials[category] ?? [];
-  const product = materials.find((item) => item.slug === slug);
+  let product = materials.find((item) => matchSlug(item, slug));
+
+  if (!product) {
+    for (const key of Object.keys(productMaterials)) {
+      const found = productMaterials[key]?.find?.((item) => matchSlug(item, slug));
+      if (found) {
+        product = found;
+        break;
+      }
+    }
+  }
 
   if (product) {
     return (

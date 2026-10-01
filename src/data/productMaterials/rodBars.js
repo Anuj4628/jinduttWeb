@@ -5,6 +5,13 @@ import flat from "../../assets/images/stock/flat-bars.jpg";
 import hex from "../../assets/images/stock/hex-bars.jpg";
 import square from "../../assets/images/stock/square-bars.jpg";
 
+import en8Img from "../../assets/images/stock/en8-round-bars.jpg";
+import en9Img from "../../assets/images/stock/en9-round-bars.jpg";
+import en24Img from "../../assets/images/stock/en24-round-bars.jpg";
+import en19Img from "../../assets/images/stock/en19-round-bars.jpg";
+import s355j2Img from "../../assets/images/stock/s355j2-round-bars.jpg";
+import a105Img from "../../assets/images/stock/a105-carbon-steel-bars.jpg";
+
 const rodBars = [
   {
     id: 1,
@@ -118,6 +125,91 @@ const rodBars = [
     shortDescription:
       "Copper Nickel Round Bars manufactured for marine engineering, desalination plants, condensers, and heat exchanger applications.",
   },
+
+  {
+    id: 13,
+    slug: "en8-round-bar",
+    image: en8Img,
+    title: "EN8 Round Bar",
+    shortDescription:
+      "EN8 (BS 970: 080M40) is an unalloyed medium-carbon engineering steel grade offering good tensile strength, machinability, and moderate wear resistance for general mechanical and automotive components.",
+    materialGroup: "Medium Carbon Engineering Steel",
+    standards: "BS 970: 080M40 (formerly En8), EN 10083-2: C45 / C45E, ISO 683-1: C45",
+    forms: "Round Bars, Peeled / Turned Bars, Bright Drawn Bars, Forged Rounds",
+    application:
+      "Shafts, axles, studs, spindles, pins, bolts, gears, and general machine engineering components",
+  },
+
+  {
+    id: 14,
+    slug: "en9-round-bar",
+    image: en9Img,
+    title: "EN9 Round Bar",
+    shortDescription:
+      "EN9 (BS 970: 070M55) is a high-carbon engineering steel that develops higher surface hardness and greater wear resistance than medium-carbon grades, making it ideal for components subjected to frictional contact.",
+    materialGroup: "High Carbon Engineering Steel",
+    standards: "BS 970: 070M55 (formerly En9), EN 10083-2: C55 / C55E, ISO 683-1: C55",
+    forms: "Round Bars, Turned / Peeled Rounds, Black Rolled Bars, Forged Bars",
+    application:
+      "Shafts, pins, cams, cylinders, wear-resistant machine parts, gears, and general engineering components",
+  },
+
+  {
+    id: 15,
+    slug: "en24-round-bar",
+    image: en24Img,
+    title: "EN24 Round Bar",
+    shortDescription:
+      "EN24 (BS 970: 817M40) is a high-strength nickel-chromium-molybdenum alloy engineering steel commonly supplied in hardened and tempered conditions for critical heavy-duty components requiring high tensile strength, shock resistance, and fatigue endurance.",
+    materialGroup: "High-Strength Alloy Engineering Steel",
+    standards: "BS 970: 817M40 (formerly En24). Related international grades: EN 10083-3 (34CrNiMo6 / 1.6582), AISI / SAE 4340 (subject to specification requirements)",
+    forms: "Hardened & Tempered (Condition T) Round Bars, Black Rolled, Bright Peeled, Forged Rounds",
+    application:
+      "Heavy-duty shafts, high-stress gears, axles, crankshafts, studs, transmission couplings, and high-strength machine parts",
+  },
+
+  {
+    id: 16,
+    slug: "en19-round-bar",
+    image: en19Img,
+    title: "EN19 Round Bar",
+    shortDescription:
+      "EN19 (BS 970: 709M40) is a versatile chromium-molybdenum alloy engineering steel known for good ductility, high fatigue resistance, and uniform through-hardening response in heavy industrial and automotive machinery.",
+    materialGroup: "Chromium-Molybdenum Alloy Engineering Steel",
+    standards: "BS 970: 709M40 (formerly En19). Related international grades: EN 10083-3 (42CrMo4 / 1.7225), AISI / SAE 4140 (subject to governing standard and heat-treatment)",
+    forms: "Quenched & Tempered (Condition T/U) Round Bars, Black Rolled, Bright Peeled, Forged Rounds",
+    application:
+      "Shafts, gears, axles, spindles, high-tensile bolts, drill rods, and heavy-duty industrial engineering components",
+  },
+
+  {
+    id: 17,
+    slug: "s355j2-round-bar",
+    image: s355j2Img,
+    title: "S355J2 Round Bar",
+    shortDescription:
+      "S355J2 is a standard non-alloy structural steel grade delivering a nominal 355 MPa minimum yield strength with verified 27J Charpy V-notch impact toughness at -20°C, suited for welded engineering and machinery structures.",
+    materialGroup: "Non-Alloy Structural Steel",
+    standards: "EN 10025-2 (1.0577 / S355J2). Predecessor designation: DIN 17100 St52-3",
+    forms: "Hot Rolled Round Bars, Forged Rounds, Peeled & Normalized Bars",
+    application:
+      "Structural components, fabricated machinery, crane frameworks, engineering structures, and general structural fabrication",
+  },
+
+  {
+    id: 18,
+    slug: "a105-bar",
+    image: a105Img,
+    title: "A105 Bar",
+    shortDescription:
+      "A105 Bar represents carbon steel raw material matching the A105 chemical composition, supplied in forged or rolled bar form for component machining, valve parts, and piping system fabrication as per customer specification.",
+    materialGroup: "Carbon Steel Material / Forging Grade",
+    standards: "Chemical composition aligned with ASTM A105 / ASME SA105. Product form, supply condition, and testing as per client ordering specification.",
+    forms: "Forged / Rolled Round Bars, Rough Turned Rounds, Supply condition as per requirement",
+    application:
+      "Flanges, valves, high-pressure fittings, piping components, machining blanks, and general engineering stock",
+  },
 ];
 
 export default rodBars;
+
