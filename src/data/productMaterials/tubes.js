@@ -1,4 +1,4 @@
-import tubeImage from "../../assets/images/productImage/tubes.webp";
+import boilerTubeImg from "../../assets/images/stock/boiler-tube-pipe.jpg";
 import heat from "../../assets/images/stock/heat-exchanger-tubes.jpg";
 import inst from "../../assets/images/stock/instrumentation-tubes.jpg";
 import seam from "../../assets/images/stock/seamless-tubes.jpg";
@@ -8,105 +8,62 @@ import weld from "../../assets/images/stock/welded-tubes.jpg";
 
 const tubes = [
   {
+    id: 1,
+    slug: "boiler-tube-pipe",
+    image: boilerTubeImg,
+    title: "Boiler Tube Pipe Supplier – High Pressure & Heat Exchanger",
+    shortDescription:
+      "Precision cold drawn and hot finished Boiler tubes and pipes engineered for heat exchangers, economizers, superheaters, and power plants.",
+  },
+  {
     id: 2,
     slug: "stainless-steel-tubes",
     image: weld,
     title:
-      "Stainless Steel Tubes Supplier – 304, 304L, 316, 316L, 310S, 904L & More",
+      "Stainless Steel Tubes Supplier – 304, 304L, 316, 316L, 310S, 321 & More",
     shortDescription:
       "Premium stainless steel tubes manufactured in various grades for heat exchangers, process piping, food processing, pharmaceutical, and engineering applications.",
   },
-
   {
     id: 3,
-    slug: "high-performance-alloy-tubes",
+    slug: "heat-exchanger-tubes",
     image: heat,
-    title:
-      "High-Performance Alloy Tubes Supplier – Nimonic, Nichrome, Nitronic, Nilo & Alloy",
+    title: "Heat Exchanger Tubes Supplier",
     shortDescription:
-      "High-performance alloy tubes designed for extreme temperatures, aerospace, power generation, and critical industrial applications.",
+      "Precision engineered heat exchanger and condenser tubes in stainless steel and exotic alloys for optimal thermal transfer.",
   },
-
   {
     id: 4,
-    slug: "alloy-28-tubes",
-    image: special,
-    title: "Alloy 28 Tubes Supplier",
+    slug: "instrumentation-tubes",
+    image: inst,
+    title: "Instrumentation Tubes Supplier",
     shortDescription:
-      "Alloy 28 tubes providing outstanding resistance to pitting, crevice corrosion, and aggressive chemical processing environments.",
+      "High-pressure precision instrumentation tubing manufactured with strict dimensional tolerances and smooth internal bore.",
   },
-
   {
     id: 5,
+    slug: "seamless-tubes",
+    image: seam,
+    title: "Seamless Precision Tubes Supplier",
+    shortDescription:
+      "Cold drawn seamless precision tubes engineered for high-pressure hydraulic, mechanical, and aerospace systems.",
+  },
+  {
+    id: 6,
     slug: "special-alloy-tubes",
-    image: inst,
-    title: "Special Alloy Tubes Supplier – SMO 254 (F44) & Alloy 20",
+    image: special,
+    title: "Special Alloy Tubes Supplier – SMO 254 & Alloy 20",
     shortDescription:
       "Special alloy tubes engineered for superior corrosion resistance in offshore, marine, and chemical processing industries.",
   },
-
-  {
-    id: 6,
-    slug: "nickel-alloy-200-201-tubes",
-    image: seam,
-    title: "Nickel Alloy 200 / 201 Tubes Supplier",
-    shortDescription:
-      "Nickel Alloy 200/201 tubes offering excellent thermal conductivity, corrosion resistance, and reliable performance in chemical industries.",
-  },
-
   {
     id: 7,
-    slug: "monel-400-tubes",
-    image: heat,
-    title: "Monel 400 Tubes Supplier",
-    shortDescription:
-      "Monel 400 tubes manufactured for exceptional resistance against seawater, acids, alkalis, and harsh marine environments.",
-  },
-
-  {
-    id: 8,
-    slug: "inconel-tubes",
-    image: weld,
-    title: "Inconel Tubes Supplier – 600, 601, 625, 690 & X-750",
-    shortDescription:
-      "Inconel tubes engineered for high-temperature, oxidation-resistant, and high-pressure industrial applications.",
-  },
-
-  {
-    id: 9,
-    slug: "incoloy-tubes",
-    image: heat,
-    title: "Incoloy Tubes Supplier – 800, 800H, 800HT, 825 & 330 (DS 330)",
-    shortDescription:
-      "Incoloy tubes providing superior mechanical strength and resistance to oxidation, carburization, and elevated temperatures.",
-  },
-
-  {
-    id: 10,
-    slug: "hastelloy-tubes",
-    image: special,
-    title: "Hastelloy Tubes Supplier – C22, C276, B2, B3, C2000, C59, C4 & HN",
-    shortDescription:
-      "Hastelloy tubes offering exceptional resistance to highly corrosive chemicals, acids, and extreme industrial environments.",
-  },
-
-  {
-    id: 11,
     slug: "duplex-super-duplex-steel-tubes",
     image: square,
     title:
       "Duplex & Super Duplex Steel Tubes Supplier – S31803, S32750 & S32760",
     shortDescription:
       "Duplex and Super Duplex Steel tubes combining high mechanical strength with superior corrosion resistance for offshore and marine applications.",
-  },
-
-  {
-    id: 12,
-    slug: "copper-nickel-tubes",
-    image: inst,
-    title: "Copper Nickel Tubes Supplier – 90/10 (C70600) & 70/30 (C71500)",
-    shortDescription:
-      "Copper Nickel tubes manufactured for seawater piping, condensers, desalination plants, and marine engineering applications.",
   },
 ];
 

@@ -50,7 +50,9 @@ const productMaterials = {
 
   "forged-fittings": forgedfitting,
   "dairy-fittings": dairyfitting,
-  "pipes-tubes": [...pipes, ...tubes],
+  "pipes-tubes": Array.from(
+    new Map([...pipes, ...tubes].map((item) => [item.slug, item])).values()
+  ),
   "sheets-plates": [...sheets, ...plates],
 };
 

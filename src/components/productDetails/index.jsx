@@ -380,8 +380,11 @@ export const productComponentMap = {
   // 🟢 STAINLESS STEEL (MATERIALS)
   // =============================
   "stainless-steel-304-304l-pipes": StainlessSteel304304LPipes,
+  "stainless-steel-304-pipes": StainlessSteel304304LPipes,
   "stainless-steel-310s-pipes": StainlessSteel310SPipes,
+  "stainless-steel-310-pipes": StainlessSteel310SPipes,
   "stainless-steel-316-316l-pipes": StainlessSteel316Pipes,
+  "stainless-steel-316-pipes": StainlessSteel316Pipes,
   "stainless-steel-317l-pipes": StainlessSteel317LPipes,
   "stainless-steel-321-pipes": StainlessSteel321Pipes,
   "stainless-steel-904l-pipes": StainlessSteel904LPipes,
