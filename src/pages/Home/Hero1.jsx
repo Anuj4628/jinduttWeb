@@ -18,16 +18,6 @@ const PROGRESS_STEP_MS = 40;
 const slides = [
   {
     id: 1,
-    image: slidePipes,
-    eyebrow: "BUILT ON STRENGTH",
-    accentWord: "ENGINEERED",
-    headlineRest: "PIPES & SEAMLESS\nTUBING SOLUTIONS.",
-    description:
-      "High-grade austenitic, duplex, and nickel alloy pipes precision-formed for high-pressure fluid systems, offshore infrastructure, and chemical process piping.",
-    specTag: "ISO 9001:2015 CERTIFIED // PRIME MILL TEST CERTIFICATES",
-  },
-  {
-    id: 2,
     image: slideFlanges,
     eyebrow: "CRITICAL FLOW ENGINEERING",
     accentWord: "PRECISION",
@@ -35,6 +25,16 @@ const slides = [
     description:
       "Heavy-duty weld neck, blind, slip-on flanges and buttweld elbows engineered to ASME/ANSI standards for leak-proof performance in demanding severe environments.",
     specTag: "IBR APPROVED TEST CERTIFICATES // DIRECT STOCKIST",
+  },
+  {
+    id: 2,
+    image: slidePipes,
+    eyebrow: "BUILT ON STRENGTH",
+    accentWord: "ENGINEERED",
+    headlineRest: "PIPES & SEAMLESS\nTUBING SOLUTIONS.",
+    description:
+      "High-grade austenitic, duplex, and nickel alloy pipes precision-formed for high-pressure fluid systems, offshore infrastructure, and chemical process piping.",
+    specTag: "ISO 9001:2015 CERTIFIED // PRIME MILL TEST CERTIFICATES",
   },
   {
     id: 3,
