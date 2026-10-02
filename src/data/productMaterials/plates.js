@@ -20,15 +20,6 @@ import abrexPlateImg from "../../assets/images/stock/abrex-wear-steel-plates.jpg
 const plates = [
   {
     id: 1,
-    slug: "titanium-plates",
-    image: hot,
-    title: "Titanium Plates Supplier – Grade 2 & Grade 5",
-    shortDescription:
-      "Premium Titanium Plates offering exceptional strength, lightweight properties, and outstanding corrosion resistance for aerospace, marine, and chemical industries.",
-  },
-
-  {
-    id: 2,
     slug: "stainless-steel-plates",
     image: cold,
     title:
@@ -38,49 +29,83 @@ const plates = [
   },
 
   {
-    id: 3,
-    slug: "high-performance-alloy-plates",
-    image: cheq,
-    title:
-      "High-Performance Alloy Plates Supplier – Nimonic, Nichrome, Nitronic, Nilo & More",
+    id: 2,
+    slug: "pressure-vessel-steel-plates",
+    image: pressureVesselImg,
+    title: "Pressure Vessel Steel Plates – ASTM A516 Gr. 60 / 65 / 70",
     shortDescription:
-      "High-performance Alloy Plates engineered for high-temperature, aerospace, power generation, and critical engineering applications.",
+      "Heavy-duty pressure vessel steel plates engineered for industrial boilers, pressurized gas spheres, and heat exchanger fabrication with certified notch toughness.",
+    materialGroup: "Pressure Vessel Steel",
+    standards: "ASTM A516 / ASME SA516, EN 10028-2, BS 1501, DIN 17155",
+    forms: "Hot Rolled Plates, Normalized Plates, Cut-to-Size Blanks",
+    application:
+      "Pressure vessels, chemical reactors, storage spheres, heat exchangers, and industrial fabrication",
+  },
+
+  {
+    id: 3,
+    slug: "boiler-plate-steel",
+    image: boilerPlateImg,
+    title: "Boiler Quality Steel Plates – ASTM A515 & EN 10028-2",
+    shortDescription:
+      "High-temperature boiler quality steel plates manufactured for steam drums, thermal energy plants, and pressurized boiler shells requiring elevated temperature strength.",
+    materialGroup: "Boiler Quality Steel",
+    standards: "ASTM A515 / ASME SA515, ASTM A285, EN 10028-2, BS 1501",
+    forms: "Hot Rolled Heavy Plates, As-Rolled / Normalized Plates, Flanged Heads",
+    application:
+      "Industrial steam boilers, economizers, steam headers, thermal heaters, and autoclave pressure shells",
   },
 
   {
     id: 4,
-    slug: "alloy-28-plates",
-    image: hot,
-    title: "Alloy 28 Plates Supplier",
+    slug: "hic-steel-plates",
+    image: hicPlateImg,
+    title: "HIC Resistant Steel Plates – Sour Service Tested",
     shortDescription:
-      "Alloy 28 Plates providing excellent resistance to pitting, crevice corrosion, and aggressive chemical environments in demanding industries.",
+      "Hydrogen-Induced Cracking (HIC) resistant pressure vessel plates manufactured with ultra-low sulfur and inclusion control for severe wet H2S sour service environments.",
+    materialGroup: "HIC / Sour Service Steel",
+    standards: "NACE TM0284, NACE MR0175 / ISO 15156, ASTM A516 Gr. 60/65/70 HIC, EN 10028-3",
+    forms: "Vacuum Degassed Plates, Calcium-Treated Ultra-Low Sulfur Plates, Normalized Plates",
+    application:
+      "Sour oil & gas pipelines, wet H2S separators, gas sweetening towers, and refinery hydroprocessing vessels",
   },
 
   {
     id: 5,
-    slug: "special-alloy-plates",
-    image: cold,
-    title: "Special Alloy Plates Supplier – SMO 254 (F44) & Alloy 20",
+    slug: "chrome-moly-plate",
+    image: chromeMolyImg,
+    title: "Chrome Moly Alloy Steel Plates – ASTM A387 Gr. 11 / 12 / 22",
     shortDescription:
-      "Special Alloy Plates offering exceptional corrosion resistance and durability for marine, offshore, and chemical processing industries.",
+      "Chromium-molybdenum alloy plates designed for elevated-temperature service and high-pressure hydrogen environments with superior creep resistance.",
+    materialGroup: "Chrome Moly Alloy Steel",
+    standards: "ASTM A387 / ASME SA387, EN 10028-2 (16Mo3 / 13CrMo4-5), BS 1501-250, DIN 17155",
+    forms: "Normalized & Tempered Heavy Alloy Plates, Vacuum Degassed Slabs, Custom Cut Blanks",
+    application:
+      "Petrochemical hydrocrackers, delayed cokers, power utility boilers, high-temperature heat exchangers, and reactors",
   },
 
   {
     id: 6,
-    slug: "nickel-alloy-200-201-plates",
-    image: cheq,
-    title: "Nickel Alloy 200 / 201 Plates Supplier",
+    slug: "en-series-tool-steel-plates",
+    image: enSeriesImg,
+    title: "EN Series & Tool Steel Plates – EN8, EN9, EN19, EN24 & D2",
     shortDescription:
-      "Nickel Alloy 200/201 Plates manufactured for excellent thermal conductivity, corrosion resistance, and chemical processing applications.",
+      "High-tensile carbon and alloy tool steel plates designed for high hardenability, fatigue strength, and dimensional stability in molds, dies, and machine parts.",
+    materialGroup: "Engineering & Tool Steel",
+    standards: "BS 970 / EN 10083, DIN 17350, ISO 4957, AISI / ASTM A681",
+    forms: "Annealed Plates, Pre-Hardened Tool Steel Blocks, Ground Flat Stock, Machined Blanks",
+    application:
+      "Plastic injection molds, press brake tooling, stamping dies, machine bedplates, gears, shafts, and heavy engineering fixtures",
   },
 
   {
     id: 7,
-    slug: "monel-400-plates",
-    image: hot,
-    title: "Monel 400 Plates Supplier",
+    slug: "duplex-super-duplex-steel-plates",
+    image: cold,
+    title:
+      "Duplex & Super Duplex Steel Plates Supplier – S31803, S32205, S32750 & S32760",
     shortDescription:
-      "Monel 400 Plates offering superior resistance to seawater, acids, alkalis, and harsh marine environments.",
+      "Duplex and Super Duplex Steel Plates combining high mechanical strength with superior corrosion resistance for offshore, marine, and chemical industries.",
   },
 
   {
@@ -113,16 +138,61 @@ const plates = [
 
   {
     id: 11,
-    slug: "duplex-super-duplex-steel-plates",
-    image: cold,
-    title:
-      "Duplex & Super Duplex Steel Plates Supplier – S31803, S32205, S32750 & S32760",
+    slug: "monel-400-plates",
+    image: hot,
+    title: "Monel 400 Plates Supplier",
     shortDescription:
-      "Duplex and Super Duplex Steel Plates combining high mechanical strength with superior corrosion resistance for offshore, marine, and chemical industries.",
+      "Monel 400 Plates offering superior resistance to seawater, acids, alkalis, and harsh marine environments.",
   },
 
   {
     id: 12,
+    slug: "nickel-alloy-200-201-plates",
+    image: cheq,
+    title: "Nickel Alloy 200 / 201 Plates Supplier",
+    shortDescription:
+      "Nickel Alloy 200/201 Plates manufactured for excellent thermal conductivity, corrosion resistance, and chemical processing applications.",
+  },
+
+  {
+    id: 13,
+    slug: "titanium-plates",
+    image: hot,
+    title: "Titanium Plates Supplier – Grade 2 & Grade 5",
+    shortDescription:
+      "Premium Titanium Plates offering exceptional strength, lightweight properties, and outstanding corrosion resistance for aerospace, marine, and chemical industries.",
+  },
+
+  {
+    id: 14,
+    slug: "alloy-28-plates",
+    image: hot,
+    title: "Alloy 28 Plates Supplier",
+    shortDescription:
+      "Alloy 28 Plates providing excellent resistance to pitting, crevice corrosion, and aggressive chemical environments in demanding industries.",
+  },
+
+  {
+    id: 15,
+    slug: "special-alloy-plates",
+    image: cold,
+    title: "Special Alloy Plates Supplier – SMO 254 (F44) & Alloy 20",
+    shortDescription:
+      "Special Alloy Plates offering exceptional corrosion resistance and durability for marine, offshore, and chemical processing industries.",
+  },
+
+  {
+    id: 16,
+    slug: "high-performance-alloy-plates",
+    image: cheq,
+    title:
+      "High-Performance Alloy Plates Supplier – Nimonic, Nichrome, Nitronic, Nilo & More",
+    shortDescription:
+      "High-performance Alloy Plates engineered for high-temperature, aerospace, power generation, and critical engineering applications.",
+  },
+
+  {
+    id: 17,
     slug: "copper-nickel-plates",
     image: cheq,
     title: "Copper Nickel Plates Supplier – 70/30 & 90/10",
@@ -131,49 +201,7 @@ const plates = [
   },
 
   {
-    id: 13,
-    slug: "pressure-vessel-steel-plates",
-    image: pressureVesselImg,
-    title: "Pressure Vessel Steel Plates – ASTM A516 Gr. 60 / 65 / 70",
-    shortDescription:
-      "Heavy-duty pressure vessel steel plates engineered for industrial boilers, pressurized gas spheres, and heat exchanger fabrication with certified notch toughness.",
-    materialGroup: "Pressure Vessel Steel",
-    standards: "ASTM A516 / ASME SA516, EN 10028-2, BS 1501, DIN 17155",
-    forms: "Hot Rolled Plates, Normalized Plates, Cut-to-Size Blanks",
-    application:
-      "Pressure vessels, chemical reactors, storage spheres, heat exchangers, and industrial fabrication",
-  },
-
-  {
-    id: 14,
-    slug: "boiler-plate-steel",
-    image: boilerPlateImg,
-    title: "Boiler Quality Steel Plates – ASTM A515 & EN 10028-2",
-    shortDescription:
-      "High-temperature boiler quality steel plates manufactured for steam drums, thermal energy plants, and pressurized boiler shells requiring elevated temperature strength.",
-    materialGroup: "Boiler Quality Steel",
-    standards: "ASTM A515 / ASME SA515, ASTM A285, EN 10028-2, BS 1501",
-    forms: "Hot Rolled Heavy Plates, As-Rolled / Normalized Plates, Flanged Heads",
-    application:
-      "Industrial steam boilers, economizers, steam headers, thermal heaters, and autoclave pressure shells",
-  },
-
-  {
-    id: 15,
-    slug: "hic-steel-plates",
-    image: hicPlateImg,
-    title: "HIC Resistant Steel Plates – Sour Service Tested",
-    shortDescription:
-      "Hydrogen-Induced Cracking (HIC) resistant pressure vessel plates manufactured with ultra-low sulfur and inclusion control for severe wet H2S sour service environments.",
-    materialGroup: "HIC / Sour Service Steel",
-    standards: "NACE TM0284, NACE MR0175 / ISO 15156, ASTM A516 Gr. 60/65/70 HIC, EN 10028-3",
-    forms: "Vacuum Degassed Plates, Calcium-Treated Ultra-Low Sulfur Plates, Normalized Plates",
-    application:
-      "Sour oil & gas pipelines, wet H2S separators, gas sweetening towers, and refinery hydroprocessing vessels",
-  },
-
-  {
-    id: 16,
+    id: 18,
     slug: "high-yield-cold-forming-steel-plates",
     image: highYieldColdFormingImg,
     title: "High Yield Cold Forming Steel Plates – S355MC to S700MC",
@@ -187,7 +215,7 @@ const plates = [
   },
 
   {
-    id: 17,
+    id: 19,
     slug: "460-yield-steel-plates",
     image: yield460Img,
     title: "460 Yield High-Strength Structural Steel Plates – S460N / S460ML",
@@ -201,7 +229,7 @@ const plates = [
   },
 
   {
-    id: 18,
+    id: 20,
     slug: "quenched-and-tempered-steel-plates",
     image: quenchedTemperedImg,
     title: "Quenched & Tempered (Q&T) High-Yield Steel Plates – S690QL / ASTM A514",
@@ -215,7 +243,7 @@ const plates = [
   },
 
   {
-    id: 19,
+    id: 21,
     slug: "abrasion-resistant-steel-plates",
     image: abrasionResistantImg,
     title: "Abrasion Resistant (AR) Wear Steel Plates – AR 400 / 450 / 500 HBW",
@@ -229,7 +257,7 @@ const plates = [
   },
 
   {
-    id: 20,
+    id: 22,
     slug: "armour-plate",
     image: armourPlateImg,
     title: "Armour & Ballistic Protective Steel Plates – High Hardness",
@@ -243,21 +271,7 @@ const plates = [
   },
 
   {
-    id: 21,
-    slug: "chrome-moly-plate",
-    image: chromeMolyImg,
-    title: "Chrome Moly Alloy Steel Plates – ASTM A387 Gr. 11 / 12 / 22",
-    shortDescription:
-      "Chromium-molybdenum alloy plates designed for elevated-temperature service and high-pressure hydrogen environments with superior creep resistance.",
-    materialGroup: "Chrome Moly Alloy Steel",
-    standards: "ASTM A387 / ASME SA387, EN 10028-2 (16Mo3 / 13CrMo4-5), BS 1501-250, DIN 17155",
-    forms: "Normalized & Tempered Heavy Alloy Plates, Vacuum Degassed Slabs, Custom Cut Blanks",
-    application:
-      "Petrochemical hydrocrackers, delayed cokers, power utility boilers, high-temperature heat exchangers, and reactors",
-  },
-
-  {
-    id: 22,
+    id: 23,
     slug: "offshore-and-steel-plates",
     image: offshoreSteelImg,
     title: "Offshore & Structural Steel Plates – EN 10225 & API 2H / 2W / 2Y",
@@ -271,7 +285,7 @@ const plates = [
   },
 
   {
-    id: 23,
+    id: 24,
     slug: "corten-steel-plates",
     image: cortenSteelImg,
     title: "Corten / Weathering Steel Plates – ASTM A588 & Corten A / B",
@@ -282,20 +296,6 @@ const plates = [
     forms: "Hot Rolled Weathering Plates, Slit Plates, Profiling Sheets, Architectural Panels",
     application:
       "Architectural facade cladding, bridge structures, outdoor sculptures, railway wagons, transmission towers, and container boxes",
-  },
-
-  {
-    id: 24,
-    slug: "en-series-tool-steel-plates",
-    image: enSeriesImg,
-    title: "EN Series & Tool Steel Plates – EN8, EN9, EN19, EN24 & D2",
-    shortDescription:
-      "High-tensile carbon and alloy tool steel plates designed for high hardenability, fatigue strength, and dimensional stability in molds, dies, and machine parts.",
-    materialGroup: "Engineering & Tool Steel",
-    standards: "BS 970 / EN 10083, DIN 17350, ISO 4957, AISI / ASTM A681",
-    forms: "Annealed Plates, Pre-Hardened Tool Steel Blocks, Ground Flat Stock, Machined Blanks",
-    application:
-      "Plastic injection molds, press brake tooling, stamping dies, machine bedplates, gears, shafts, and heavy engineering fixtures",
   },
 
   {
@@ -325,7 +325,7 @@ const plates = [
     application:
       "Earthmoving excavator buckets, gravel handling chutes, asphalt mixer paddles, mining dumpers, cement hopper cones, and dredge piping",
   },
+
 ];
 
 export default plates;
-

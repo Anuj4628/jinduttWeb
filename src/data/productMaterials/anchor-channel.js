@@ -1,46 +1,53 @@
 // src/data/productMaterials/anchorChannel.js
-import channelImage from "../../assets/images/productImage/angle-channels.webp";
-import regular from "../../assets/images/stock/regular-angle.jpg"
-import channel from "../../assets/images/stock/regular-channel.jpg"
-import carbon from "../../assets/images/stock/carbon-angle-channel.jpg"
+import regular from "../../assets/images/stock/regular-angle.jpg";
+import channel from "../../assets/images/stock/regular-channel.jpg";
+import carbon from "../../assets/images/stock/carbon-angle-channel.jpg";
+
 const anchorChannel = [
+  // ============================================
+  // 1. STAINLESS STEEL STRUCTURAL ANGLES & CHANNELS (TOP PRIORITY)
+  // ============================================
   {
     id: 1,
     slug: "regular-angle",
     image: regular,
-    title: "Regular Angle",
+    title: "Stainless Steel Structural Angle",
     shortDescription:
-      "ASTM A36, IS 2062 Gr E250 / E350, SS 304/304L, SS 316/316L, Hot-Rolled L-Shape Structural Profiles.",
-    materialGroup: "Equal & Unequal",
-    standards: "ASTM A36, IS 2062 Gr E250 / E350, SS 304/304L, SS 316/316L",
-    forms: "Hot-Rolled L-Shape Structural Profiles",
+      "SS 304, 304L, 316, 316L, ASTM A276 Hot-Rolled and Laser-Fused Equal & Unequal L-Shape Structural Profiles.",
+    materialGroup: "Stainless Steel",
+    standards: "ASTM A276 / A479 SS 304/304L, SS 316/316L",
+    forms: "Hot-Rolled Equal & Unequal L-Shape Profiles",
     application:
-      "Structural fabrication, construction, industrial frameworks, and support systems",
+      "Architectural framing, cleanroom supports, marine frameworks, and chemical structures",
   },
   {
     id: 2,
     slug: "regular-channel",
     image: channel,
-    title: "Regular Channel",
+    title: "Stainless Steel Structural Channel",
     shortDescription:
-      "IS 808 Standard, ASTM A36, ASME SA36, Stainless Steel 304, 316, Tapered Flange, Parallel Flange Iron Sections.",
-    materialGroup: "C & U Channels",
-    standards: "IS 808 Standard, ASTM A36, ASME SA36, Stainless Steel 304, 316",
-    forms: "Tapered Flange, Parallel Flange Iron Sections",
+      "SS 304, 304L, 316, 316L C-Channels and U-Channels with Tapered & Parallel Flange Sections for corrosive environments.",
+    materialGroup: "Stainless Steel",
+    standards: "ASTM A276 / A479 SS 304, 316, EN 10088-3",
+    forms: "Tapered Flange, Parallel Flange C & U Channels",
     application:
-      "Heavy-duty structural support, machinery frames, and industrial fabrication",
+      "Corrosion-resistant structural support, wastewater plants, and industrial equipment",
   },
+
+  // ============================================
+  // 2. CARBON STEEL STRUCTURAL ANGLES & CHANNELS
+  // ============================================
   {
     id: 3,
     slug: "carbon-angle-channel",
     image: carbon,
     title: "Carbon Steel Angle & Channel",
     shortDescription:
-      "ASTM A572 Gr 50 / Gr 60, A529, IS 2062 E250A/B, High-Yield Carbon Steel Structural Conduits & Framework Sections.",
-    materialGroup: "Carbon Steel Deck",
-    standards: "ASTM A572 Gr 50 / Gr 60, A529, IS 2062 E250A/B",
-    forms: "High-Yield Carbon Steel Structural Conduits & Framework Sections",
-    application: "Construction, infrastructure, and engineering industries",
+      "ASTM A36, A572 Gr 50, IS 2062 E250 / E350 High-Yield Carbon Steel Structural Angles, C-Channels, and U-Channels for building frameworks.",
+    materialGroup: "Carbon Steel",
+    standards: "ASTM A36, A572 Gr 50, IS 2062 E250A/B, IS 808",
+    forms: "Hot-Rolled Angles, Parallel & Tapered Flange Channels",
+    application: "Heavy construction, bridge infrastructure, and industrial engineering",
   },
 ];
 

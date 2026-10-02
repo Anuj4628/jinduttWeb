@@ -1,14 +1,32 @@
 // src/data/productMaterials/wireMesh.js
 
-import woven from "../../assets/images/stock/woven-wire-mesh.jpg"
-import weld from "../../assets/images/stock/welded-wire-mesh.jpg"
-import crim from "../../assets/images/stock/crimped-wire-mesh.jpg"
-import chain from "../../assets/images/stock/chain-link-mesh.jpg"
-import stain from "../../assets/images/stock/stainless-steel-wire-mesh.jpg"
-import hex from "../../assets/images/stock/hexagonal-wire-netting.jpg"
+import stain from "../../assets/images/stock/stainless-steel-wire-mesh.jpg";
+import woven from "../../assets/images/stock/woven-wire-mesh.jpg";
+import weld from "../../assets/images/stock/welded-wire-mesh.jpg";
+import crim from "../../assets/images/stock/crimped-wire-mesh.jpg";
+import chain from "../../assets/images/stock/chain-link-mesh.jpg";
+import hex from "../../assets/images/stock/hexagonal-wire-netting.jpg";
+
 const wireMesh = [
+  // ============================================
+  // 1. STAINLESS STEEL WIRE MESH (TOP PRIORITY)
+  // ============================================
   {
     id: 1,
+    slug: "stainless-steel-wire-mesh",
+    image: stain,
+    title: "Stainless Steel Wire Mesh",
+    shortDescription:
+      "SS 304, 304L, 316, 316L, 904L, High-Density Micron Filter Cloth, Fine Chemical Screening Sieve Runs, Corrosive Resistant Industrial Wire Gauzes.",
+    materialGroup: "Stainless Steel",
+    standards: "SS 304, 304L, 316, 316L, 904L, ASTM E2016",
+    forms:
+      "High-Density Micron Filter Cloth, Fine Chemical Screening Sieve Runs, Corrosive Resistant Industrial Wire Gauzes",
+    application:
+      "Filtration, food processing, pharmaceutical, and chemical industries",
+  },
+  {
+    id: 2,
     slug: "woven-wire-mesh",
     image: woven,
     title: "Woven Wire Mesh",
@@ -22,7 +40,7 @@ const wireMesh = [
       "Filtration, screening, sieving, security fencing, and industrial processing",
   },
   {
-    id: 2,
+    id: 3,
     slug: "welded-wire-mesh",
     image: weld,
     title: "Welded Wire Mesh",
@@ -36,7 +54,7 @@ const wireMesh = [
       "Construction reinforcement, fencing, cages, partitions, and industrial applications",
   },
   {
-    id: 3,
+    id: 4,
     slug: "crimped-wire-mesh",
     image: crim,
     title: "Crimped Wire Mesh",
@@ -50,7 +68,7 @@ const wireMesh = [
       "Mining, quarrying, stone crushing, and screening applications",
   },
   {
-    id: 4,
+    id: 5,
     slug: "chain-link-mesh",
     image: chain,
     title: "Chain Link Mesh",
@@ -64,32 +82,17 @@ const wireMesh = [
       "Perimeter fencing, sports grounds, industrial security, agricultural, and residential applications",
   },
   {
-    id: 5,
-    slug: "stainless-steel-wire-mesh",
-    image: stain,
-    title: "Stainless Steel Wire Mesh",
-    shortDescription:
-      "SS 304, 304L, 316, 316L, 904L, High-Density Micron Filter Cloth, Fine Chemical Screening Sieve Runs, Corrosive Resistant Industrial Wire Gauzes.",
-    materialGroup: "Square & Twilled Weave",
-    standards: "SS 304, 304L, 316, 316L, 904L",
-    forms:
-      "High-Density Micron Filter Cloth, Fine Chemical Screening Sieve Runs, Corrosive Resistant Industrial Wire Gauzes",
-    application:
-      "Filtration, food processing, pharmaceutical, and chemical industries",
-  },
-  {
     id: 6,
     slug: "hexagonal-wire-netting",
     image: hex,
     title: "Hexagonal Wire Netting",
     shortDescription:
       "Normal Twist Netting, Reverse Twist, Heavy-Gauge Earth Gabion Boxes, Pipeline Thermal Insulation Wrap Mesh.",
-    materialGroup: "Hexagonal Twist",
+    materialGroup: "Hexagonal Netting",
     standards: "Normal Twist Netting, Reverse Twist",
-    forms:
-      "Heavy-Gauge Earth Gabion Boxes, Pipeline Thermal Insulation Wrap Mesh",
+    forms: "Gabion Boxes, Hexagonal Mesh Rolls",
     application:
-      "Poultry fencing, agriculture, insulation support, gabions, and erosion control",
+      "Slope stabilization, soil erosion control, gabions, and insulation wrapping",
   },
 ];
 

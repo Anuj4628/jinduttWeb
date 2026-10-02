@@ -24,6 +24,25 @@ import valves from "./valves";
 import wireMesh from "./wire-mesh";
 import wires from "./wires";
 
+// Standard material priority: Stainless Steel (1) -> Carbon Steel (2) -> Alloy Steel (3) -> Others (4)
+const getMaterialPriority = (item) => {
+  const text = `${item.title || ""} ${item.slug || ""} ${item.materialGroup || ""}`.toLowerCase();
+  if (text.includes("stainless") || text.includes("ss ") || text.includes("304") || text.includes("316") || text.includes("310") || text.includes("321") || text.includes("904")) {
+    return 1;
+  }
+  if (text.includes("carbon") || text.includes("mild steel") || text.includes("ms erw") || text.includes("pressure vessel") || text.includes("boiler") || text.includes("hic") || text.includes("a105") || text.includes("en8") || text.includes("en9") || text.includes("s355")) {
+    return 2;
+  }
+  if (text.includes("alloy steel") || text.includes("chrome moly") || text.includes("en19") || text.includes("en24") || text.includes("p1 to p22") || text.includes("t11") || text.includes("f11") || text.includes("wp11") || text.includes("wp22") || text.includes("wp91")) {
+    return 3;
+  }
+  return 4;
+};
+
+const sortCombined = (items) => {
+  return [...items].sort((a, b) => getMaterialPriority(a) - getMaterialPriority(b));
+};
+
 const productMaterials = {
   coils,
   flanges,
@@ -50,10 +69,10 @@ const productMaterials = {
 
   "forged-fittings": forgedfitting,
   "dairy-fittings": dairyfitting,
-  "pipes-tubes": Array.from(
-    new Map([...pipes, ...tubes].map((item) => [item.slug, item])).values()
+  "pipes-tubes": sortCombined(
+    Array.from(new Map([...pipes, ...tubes].map((item) => [item.slug, item])).values())
   ),
-  "sheets-plates": [...sheets, ...plates],
+  "sheets-plates": sortCombined([...sheets, ...plates]),
 };
 
 export default productMaterials;

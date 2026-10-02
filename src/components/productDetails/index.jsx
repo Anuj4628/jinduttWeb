@@ -453,7 +453,6 @@ export const productComponentMap = {
   "nickel-alloy-200-sheets": NickelAlloy200Sheets,
   "nickel-alloy-200-tubes": NickelAlloy200Tubes,
   "nickel-alloy-200-wires": NickelAlloy200Wires,
-  "nickel-alloy-pipes": NickelAlloyPipes,
 
   // =============================
   // ⚪ OTHER ALLOYS (MATERIALS)
@@ -483,8 +482,6 @@ export const productComponentMap = {
   "alloy-28-sheets": Alloy28Sheets,
   "alloy-28-tubes": Alloy28Tubes,
   "alloy-28-wires": Alloy28Wires,
-  "titanium-pipes": TitaniumPipes,
-  "titanium-coils": TitaniumCoils,
 };
 
 // ============================================================================

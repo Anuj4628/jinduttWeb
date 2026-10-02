@@ -16,7 +16,7 @@ import {
 } from "../../utils/contactHelpers";
 
 // Unified image imports (same for all product pages)
-import productImage from "../../assets/images/productImage/rod.webp";
+import productImage from "../../assets/images/stock/high-performance-alloy-round-bars.jpg";
 import bannerImage from "../../assets/images/productImage/banner-industrial.webp";
 
 // Stock Availability Images
@@ -358,18 +358,18 @@ const HighPerformanceAlloyRoundBars = () => {
     ],
 
     shopByMaterial: [
-      { name: "Copper Nickel", slug: "copper-nickel" },
+      { name: "Stainless Steel", slug: "stainless-steel" },
+      { name: "Other Materials", slug: "other-materials" },
       { name: "Duplex Steel", slug: "duplex-steel" },
+      { name: "Nickel Alloy", slug: "nickel-alloy" },
+      { name: "Copper Nickel", slug: "copper-nickel" },
       { name: "Hastelloy", slug: "hastelloy" },
       { name: "Incoloy", slug: "incoloy" },
       { name: "Inconel", slug: "inconel" },
       { name: "Monel", slug: "monel" },
-      { name: "Nickel Alloy", slug: "nickel-alloy" },
-      { name: "Other Materials", slug: "other-materials" },
+      { name: "Titanium", slug: "titanium" },
       { name: "Sanicro", slug: "sanicro" },
       { name: "Special Materials", slug: "special-materials" },
-      { name: "Stainless Steel", slug: "stainless-steel" },
-      { name: "Titanium", slug: "titanium" },
     ],
 
     countries: countries,
